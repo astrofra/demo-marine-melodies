@@ -1,0 +1,2177 @@
+{
+	"canvas": {
+		"clear_color": true,
+		"clear_z": true,
+		"color": [
+			0,
+			0,
+			0,
+			255
+		]
+	},
+	"environment": {
+		"ambient": [
+			0,
+			0,
+			0,
+			255
+		],
+		"brdf_map": "core/pbr/brdf.dds",
+		"current_camera": null,
+		"fog_color": [
+			255,
+			255,
+			255,
+			255
+		],
+		"fog_far": 0.0,
+		"fog_near": 0.0,
+		"probe": {
+			"irradiance_map": "core/pbr/probe.hdr.irradiance",
+			"parallax": 0.0,
+			"pos": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"radiance_map": "core/pbr/probe.hdr.radiance",
+			"rot": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.0,
+				1.0,
+				1.0
+			],
+			"type": "sphere"
+		}
+	},
+	"key_values": null,
+	"nodes": [
+		{
+			"components": [
+				0,
+				4294967295,
+				0,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 0,
+			"name": "Cartoon Fish19"
+		},
+		{
+			"components": [
+				1,
+				4294967295,
+				1,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 1,
+			"name": "Cartoon Fish1"
+		},
+		{
+			"components": [
+				2,
+				4294967295,
+				2,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 2,
+			"name": "Cartoon Fish2"
+		},
+		{
+			"components": [
+				3,
+				4294967295,
+				3,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 3,
+			"name": "Cartoon Fish3"
+		},
+		{
+			"components": [
+				4,
+				4294967295,
+				4,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 4,
+			"name": "Cartoon Fish4"
+		},
+		{
+			"components": [
+				5,
+				4294967295,
+				5,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 5,
+			"name": "Cartoon Fish5"
+		},
+		{
+			"components": [
+				6,
+				4294967295,
+				6,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 6,
+			"name": "Cartoon Fish6"
+		},
+		{
+			"components": [
+				7,
+				4294967295,
+				7,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 7,
+			"name": "Cartoon Fish7"
+		},
+		{
+			"components": [
+				8,
+				4294967295,
+				8,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 8,
+			"name": "Cartoon Fish8"
+		},
+		{
+			"components": [
+				9,
+				4294967295,
+				9,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 9,
+			"name": "Cartoon Fish9"
+		},
+		{
+			"components": [
+				10,
+				4294967295,
+				10,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 10,
+			"name": "Cartoon Fish10"
+		},
+		{
+			"components": [
+				11,
+				4294967295,
+				11,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 11,
+			"name": "Cartoon Fish11"
+		},
+		{
+			"components": [
+				12,
+				4294967295,
+				12,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 12,
+			"name": "Cartoon Fish12"
+		},
+		{
+			"components": [
+				13,
+				4294967295,
+				13,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 13,
+			"name": "Cartoon Fish13"
+		},
+		{
+			"components": [
+				14,
+				4294967295,
+				14,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 14,
+			"name": "Cartoon Fish14"
+		},
+		{
+			"components": [
+				15,
+				4294967295,
+				15,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 15,
+			"name": "Cartoon Fish15"
+		},
+		{
+			"components": [
+				16,
+				4294967295,
+				16,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 16,
+			"name": "Cartoon Fish16"
+		},
+		{
+			"components": [
+				17,
+				4294967295,
+				17,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 17,
+			"name": "Cartoon Fish17"
+		},
+		{
+			"components": [
+				18,
+				4294967295,
+				18,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 18,
+			"name": "Cartoon Fish18"
+		}
+	],
+	"objects": [
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish19_41.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish1_42.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish2_43.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish3_44.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish4_45.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish5_46.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish6_47.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish7_48.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish8_49.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish9_50.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish10_51.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish11_52.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish12_53.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish13_54.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish14_55.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish15_56.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish16_57.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish17_58.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "09 - Default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 0
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessMap",
+							"stage": 1
+						},
+						{
+							"name": "uSelfMap",
+							"path": "Cartoon_Fish/Cartoon-Fish_DM.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.5,
+								0.0,
+								0.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "Cartoon_Fish/Cartoon Fish18_59.geo"
+		}
+	],
+	"scene_anims": [
+		{
+			"anim": 4294967295,
+			"frame_duration": 50000000,
+			"name": "Take 001",
+			"node_anims": null,
+			"t_end": 3333000000,
+			"t_start": 0
+		}
+	],
+	"transforms": [
+		{
+			"parent": null,
+			"pos": [
+				3.667691946029663,
+				-0.9171309471130371,
+				-1.0405627489089966
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				-2.1770241260528564,
+				0.40572336316108704,
+				-1.0514265298843384
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				-2.5203845500946045,
+				-0.7626796960830688,
+				-1.040562629699707
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				-2.3399481773376465,
+				-1.630140781402588,
+				-1.0514156818389893
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				-1.7342920303344727,
+				-0.1146785169839859,
+				-1.039648413658142
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				-1.0734046697616577,
+				-0.7689111232757568,
+				-1.0514153242111206
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				-1.1105313301086426,
+				-2.033376932144165,
+				-1.0514156818389893
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				-0.5868585705757141,
+				0.47789961099624634,
+				-1.0221911668777466
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				-0.050844572484493256,
+				-0.06234541907906532,
+				-1.0510367155075073
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				-0.2122509926557541,
+				-0.5804361701011658,
+				-1.0514158010482788
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				-0.37346363067626953,
+				-1.455025553703308,
+				-1.0405628681182861
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				1.4427655935287476,
+				-1.5146207809448242,
+				-1.1463967561721802
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				1.0591562986373901,
+				-0.7044680714607239,
+				-1.0405632257461548
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				1.6068257093429565,
+				-0.18711765110492706,
+				-1.0405622720718384
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				2.4389281272888184,
+				0.4571647644042969,
+				-1.0514267683029175
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				2.3498196601867676,
+				-0.8862550258636475,
+				-1.0405628681182861
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				2.354006052017212,
+				-1.9917658567428589,
+				-1.0405629873275757
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				3.2736124992370605,
+				-0.22408869862556458,
+				-1.1463956832885742
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				3.1741464138031006,
+				-1.4242095947265625,
+				-1.0405629873275757
+			],
+			"rot": [
+				-9.33466617425438e-06,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.02490036003291607,
+				0.020743265748023987,
+				0.016897857189178467
+			]
+		}
+	]
+}

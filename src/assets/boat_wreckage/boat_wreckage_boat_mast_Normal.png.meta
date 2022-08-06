@@ -1,0 +1,9 @@
+{
+	"profiles": {
+		"default": {
+			"compression": "BC5",
+			"max-size": 512,
+			"type": "NormalMap"
+		}
+	}
+}

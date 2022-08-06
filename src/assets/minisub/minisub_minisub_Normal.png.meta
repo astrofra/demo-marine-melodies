@@ -1,0 +1,8 @@
+{
+	"profiles": {
+		"default": {
+			"compression": "BC5",
+			"max-size": 1024
+		}
+	}
+}

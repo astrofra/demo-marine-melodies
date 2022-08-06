@@ -1,0 +1,5 @@
+{
+	"features": ["OptionalBaseColorOpacityMap", "OptionalOcclusionRoughnessMetalnessMap", "OptionalNormalMap", "OptionalSelfMap", "_OptionalSkinning"],
+	"uniforms": [
+		{"name": "uSelfCtrl", "type": "Vec4", "value": [3.0, 1.0, 1.0, 1.0]}
+	]}

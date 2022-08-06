@@ -1,0 +1,16 @@
+> Total time: 4.175000 s
+--------------------------------------------------------------------------------------
+| FILE                : FUNCTION                    : LINE   : TIME   : %     : #    |
+--------------------------------------------------------------------------------------
+| C:\works\harfang\dem: particles_update_draw_model :    22  : 1.9950 : 47.8  :   52 |
+| C:\works\harfang\dem: boids_update_draw           :    77  : 0.7310 : 17.5  :   52 |
+| C:\works\harfang\dem: update_demo_scroll_text     :    18  : 0.2130 : 5.1   :   52 |
+| C:\works\harfang\dem: lerp                        :     9  : 0.1410 : 3.4   : 4735 |
+| C:\works\harfang\dem: clamp                       :     5  : 0.1110 : 2.7   : 4516 |
+| C:\works\harfang\dem: bubbles_update_draw         :    10  : 0.0470 : 1.1   :  260 |
+| C:\works\harfang\dem: anim_player                 :     1  : 0.0010 : 0.0   :   52 |
+--------------------------------------------------------------------------------------
+| C:\works\harfang\dem: map                         :     1  : ~      : ~     :  114 |
+| C:\works\harfang\dem: dtAwareDamp                 :    15  : ~      : ~     :   54 |
+| C:\works\harfang\dem: stop                        :   225  : ~      : ~     :    1 |
+--------------------------------------------------------------------------------------

@@ -1,0 +1,1880 @@
+{
+	"anims": [
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									1.0,
+									0.9999997615814209,
+									0.9999997615814209
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 1250000000,
+								"tension": 0.0,
+								"v": [
+									1.0,
+									1.0499999523162842,
+									0.9999997615814209
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									1.0,
+									1.0,
+									0.9999997615814209
+								]
+							}
+						],
+						"target": "Scale"
+					}
+				]
+			},
+			"idx": 0
+		},
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.548092782497406,
+									0.548092782497406
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 2050000000,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.5,
+									0.548092782497406
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.5480999946594238,
+									0.548092782497406
+								]
+							}
+						],
+						"target": "Scale"
+					}
+				]
+			},
+			"idx": 1
+		},
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.5480928421020508,
+									0.5480927228927612
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 2000000000,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.47999998927116394,
+									0.5480927228927612
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.5480999946594238,
+									0.5480927228927612
+								]
+							}
+						],
+						"target": "Scale"
+					},
+					{
+						"target": "Rotation"
+					}
+				]
+			},
+			"idx": 2
+		},
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									0.6965712904930115,
+									0.6965711116790771,
+									0.6965709924697876
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 1500000000,
+								"tension": 0.0,
+								"v": [
+									0.6965712904930115,
+									0.7250000238418579,
+									0.6965709924697876
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									0.6965712904930115,
+									0.6966000199317932,
+									0.6965709924697876
+								]
+							}
+						],
+						"target": "Scale"
+					}
+				]
+			},
+			"idx": 3
+		},
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									0.379289835691452,
+									0.379289835691452,
+									0.3792898654937744
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 1500000000,
+								"tension": 0.0,
+								"v": [
+									0.379289835691452,
+									0.34929999709129333,
+									0.3792898654937744
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									0.379289835691452,
+									0.37929999828338623,
+									0.3792898654937744
+								]
+							}
+						],
+						"target": "Scale"
+					}
+				]
+			},
+			"idx": 4
+		},
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.5480927228927612,
+									0.5480927228927612
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 700000000,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.5199999809265137,
+									0.5480927228927612
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.5480999946594238,
+									0.5480927228927612
+								]
+							}
+						],
+						"target": "Scale"
+					}
+				]
+			},
+			"idx": 5
+		},
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									0.6965712308883667,
+									0.6965711116790771,
+									0.6965710520744324
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 1100000000,
+								"tension": 0.0,
+								"v": [
+									0.6965712308883667,
+									0.6000000238418579,
+									0.6965710520744324
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									0.6965712308883667,
+									0.6966000199317932,
+									0.6965710520744324
+								]
+							}
+						],
+						"target": "Scale"
+					}
+				]
+			},
+			"idx": 6
+		},
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.5480928421020508,
+									0.548092782497406
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 1550000000,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.5281000137329102,
+									0.548092782497406
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									0.548092782497406,
+									0.5480999946594238,
+									0.548092782497406
+								]
+							}
+						],
+						"target": "Scale"
+					}
+				]
+			},
+			"idx": 7
+		},
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									0.37928977608680725,
+									0.37928980588912964,
+									0.3792898654937744
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 1500000000,
+								"tension": 0.0,
+								"v": [
+									0.37928977608680725,
+									0.38999998569488525,
+									0.3792898654937744
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									0.37928977608680725,
+									0.37929999828338623,
+									0.3792898654937744
+								]
+							}
+						],
+						"target": "Scale"
+					}
+				]
+			},
+			"idx": 8
+		},
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									0.26247525215148926,
+									0.26247522234916687,
+									0.26247522234916687
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 1500000000,
+								"tension": 0.0,
+								"v": [
+									0.26247525215148926,
+									0.23000000417232513,
+									0.26247522234916687
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									0.26247525215148926,
+									0.26249998807907104,
+									0.26247522234916687
+								]
+							}
+						],
+						"target": "Scale"
+					}
+				]
+			},
+			"idx": 9
+		},
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									0.2303755134344101,
+									0.23037554323673248,
+									0.23037561774253845
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 1500000000,
+								"tension": 0.0,
+								"v": [
+									0.2303755134344101,
+									0.20000000298023224,
+									0.23037561774253845
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									0.2303755134344101,
+									0.2303999960422516,
+									0.23037561774253845
+								]
+							}
+						],
+						"target": "Scale"
+					}
+				]
+			},
+			"idx": 10
+		},
+		{
+			"anim": {
+				"flags": [],
+				"t_end": 0,
+				"t_start": 0,
+				"vec3": [
+					{
+						"keys": [
+							{
+								"bias": 0.0,
+								"t": 0,
+								"tension": 0.0,
+								"v": [
+									1.0,
+									0.9999998211860657,
+									0.9999998211860657
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 1500000000,
+								"tension": 0.0,
+								"v": [
+									1.0,
+									1.0549999475479126,
+									0.9999998211860657
+								]
+							},
+							{
+								"bias": 0.0,
+								"t": 3000000000,
+								"tension": 0.0,
+								"v": [
+									1.0,
+									0.9999998211860657,
+									0.9999998211860657
+								]
+							}
+						],
+						"target": "Scale"
+					}
+				]
+			},
+			"idx": 11
+		}
+	],
+	"canvas": {
+		"clear_color": true,
+		"clear_z": true,
+		"color": [
+			0,
+			0,
+			0,
+			255
+		]
+	},
+	"environment": {
+		"ambient": [
+			0,
+			0,
+			0,
+			255
+		],
+		"brdf_map": "core/pbr/brdf.dds",
+		"current_camera": null,
+		"fog_color": [
+			255,
+			255,
+			255,
+			255
+		],
+		"fog_far": 0.0,
+		"fog_near": 0.0,
+		"irradiance_map": "core/pbr/probe.hdr.irradiance",
+		"radiance_map": "core/pbr/probe.hdr.radiance"
+	},
+	"key_values": null,
+	"nodes": [
+		{
+			"components": [
+				0,
+				4294967295,
+				0,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 0,
+			"name": "shell_0"
+		},
+		{
+			"components": [
+				1,
+				4294967295,
+				1,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 1,
+			"name": "shell_04"
+		},
+		{
+			"components": [
+				2,
+				4294967295,
+				2,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 2,
+			"name": "shell_05"
+		},
+		{
+			"components": [
+				3,
+				4294967295,
+				3,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 3,
+			"name": "shell_06"
+		},
+		{
+			"components": [
+				4,
+				4294967295,
+				4,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 4,
+			"name": "shell_07"
+		},
+		{
+			"components": [
+				5,
+				4294967295,
+				5,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 5,
+			"name": "shell_08"
+		},
+		{
+			"components": [
+				6,
+				4294967295,
+				6,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 6,
+			"name": "shell_09"
+		},
+		{
+			"components": [
+				7,
+				4294967295,
+				7,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 7,
+			"name": "shell_10"
+		},
+		{
+			"components": [
+				8,
+				4294967295,
+				8,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 8,
+			"name": "shell_11"
+		},
+		{
+			"components": [
+				9,
+				4294967295,
+				9,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 9,
+			"name": "shell_12"
+		},
+		{
+			"components": [
+				10,
+				4294967295,
+				10,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 10,
+			"name": "shell_13"
+		},
+		{
+			"components": [
+				11,
+				4294967295,
+				4294967295,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 11,
+			"name": "root"
+		},
+		{
+			"components": [
+				12,
+				4294967295,
+				4294967295,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 12,
+			"name": "scale"
+		}
+	],
+	"objects": [
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "shell"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 0
+						},
+						{
+							"name": "uSelfMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.9079999923706055,
+								0.22200000286102295,
+								0.03124999813735485
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								9.999999974752427e-07,
+								9.999906751545495e-07,
+								9.999899930335232e-07,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "seafood_000/shell_0_44.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "shell"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 0
+						},
+						{
+							"name": "uSelfMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.9079999923706055,
+								0.22200000286102295,
+								0.03124999813735485
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								9.999999974752427e-07,
+								9.999906751545495e-07,
+								9.999899930335232e-07,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "seafood_000/shell_04_45.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "shell"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 0
+						},
+						{
+							"name": "uSelfMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.9079999923706055,
+								0.22200000286102295,
+								0.03124999813735485
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								9.999999974752427e-07,
+								9.999906751545495e-07,
+								9.999899930335232e-07,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "seafood_000/shell_05_46.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "shell"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 0
+						},
+						{
+							"name": "uSelfMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.9079999923706055,
+								0.22200000286102295,
+								0.03124999813735485
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								9.999999974752427e-07,
+								9.999906751545495e-07,
+								9.999899930335232e-07,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "seafood_000/shell_06_47.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "shell"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 0
+						},
+						{
+							"name": "uSelfMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.9079999923706055,
+								0.22200000286102295,
+								0.03124999813735485
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								9.999999974752427e-07,
+								9.999906751545495e-07,
+								9.999899930335232e-07,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "seafood_000/shell_07_48.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "shell"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 0
+						},
+						{
+							"name": "uSelfMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.9079999923706055,
+								0.22200000286102295,
+								0.03124999813735485
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								9.999999974752427e-07,
+								9.999906751545495e-07,
+								9.999899930335232e-07,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "seafood_000/shell_08_49.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "shell"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 0
+						},
+						{
+							"name": "uSelfMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.9079999923706055,
+								0.22200000286102295,
+								0.03124999813735485
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								9.999999974752427e-07,
+								9.999906751545495e-07,
+								9.999899930335232e-07,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "seafood_000/shell_09_50.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "shell"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 0
+						},
+						{
+							"name": "uSelfMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.9079999923706055,
+								0.22200000286102295,
+								0.03124999813735485
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								9.999999974752427e-07,
+								9.999906751545495e-07,
+								9.999899930335232e-07,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "seafood_000/shell_10_51.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "shell"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 0
+						},
+						{
+							"name": "uSelfMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.9079999923706055,
+								0.22200000286102295,
+								0.03124999813735485
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								9.999999974752427e-07,
+								9.999906751545495e-07,
+								9.999899930335232e-07,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "seafood_000/shell_11_52.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "shell"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 0
+						},
+						{
+							"name": "uSelfMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.9079999923706055,
+								0.22200000286102295,
+								0.03124999813735485
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								9.999999974752427e-07,
+								9.999906751545495e-07,
+								9.999899930335232e-07,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "seafood_000/shell_12_53.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "shell"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "opaque",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"textures": [
+						{
+							"name": "uBaseOpacityMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 0
+						},
+						{
+							"name": "uSelfMap",
+							"path": "scenery/strokes_color.png",
+							"stage": 4
+						}
+					],
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.5882353186607361,
+								0.5882353186607361,
+								0.5882353186607361,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								1.0,
+								0.9079999923706055,
+								0.22200000286102295,
+								0.03124999813735485
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								9.999999974752427e-07,
+								9.999906751545495e-07,
+								9.999899930335232e-07,
+								-1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								5.0,
+								5.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": true
+				}
+			],
+			"name": "seafood_000/shell_13_54.geo"
+		}
+	],
+	"scene_anims": [
+		{
+			"anim": null,
+			"frame_duration": 50000000,
+			"name": "wave",
+			"node_anims": [
+				{
+					"anim": 0,
+					"node": 0
+				},
+				{
+					"anim": 1,
+					"node": 1
+				},
+				{
+					"anim": 2,
+					"node": 2
+				},
+				{
+					"anim": 3,
+					"node": 3
+				},
+				{
+					"anim": 4,
+					"node": 4
+				},
+				{
+					"anim": 5,
+					"node": 5
+				},
+				{
+					"anim": 6,
+					"node": 6
+				},
+				{
+					"anim": 7,
+					"node": 7
+				},
+				{
+					"anim": 8,
+					"node": 8
+				},
+				{
+					"anim": 9,
+					"node": 9
+				},
+				{
+					"anim": 10,
+					"node": 10
+				},
+				{
+					"anim": 11,
+					"node": 12
+				}
+			],
+			"t_end": 3000000000,
+			"t_start": 0
+		}
+	],
+	"transforms": [
+		{
+			"parent": 12,
+			"pos": [
+				3.4332275390625e-05,
+				-0.24852636456489563,
+				-0.04344334080815315
+			],
+			"rot": [
+				1.102185606956482,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.0,
+				0.9999997615814209,
+				0.9999997615814209
+			]
+		},
+		{
+			"parent": 0,
+			"pos": [
+				1.3321533203125,
+				-5.960464477539063e-08,
+				0.3749542236328125
+			],
+			"rot": [
+				5.3299799668883065e-17,
+				6.092192358293541e-16,
+				-9.999996185302734
+			],
+			"scl": [
+				0.548092782497406,
+				0.548092782497406,
+				0.548092782497406
+			]
+		},
+		{
+			"parent": 0,
+			"pos": [
+				-1.362091064453125,
+				-5.960464477539063e-08,
+				-0.260498046875
+			],
+			"rot": [
+				-3.501657009124756,
+				2.3840994834899902,
+				23.998323440551758
+			],
+			"scl": [
+				0.548092782497406,
+				0.5480928421020508,
+				0.5480927228927612
+			]
+		},
+		{
+			"parent": 0,
+			"pos": [
+				0.743804931640625,
+				2.9802322387695313e-08,
+				1.1548056602478027
+			],
+			"rot": [
+				-3.983461283496581e-06,
+				119.99998474121094,
+				14.999991416931152
+			],
+			"scl": [
+				0.6965712904930115,
+				0.6965711116790771,
+				0.6965709924697876
+			]
+		},
+		{
+			"parent": 0,
+			"pos": [
+				-0.4069063663482666,
+				6.334985882294514e-17,
+				-1.0345816612243652
+			],
+			"rot": [
+				-4.143481254577637,
+				116.22830200195313,
+				-22.723112106323242
+			],
+			"scl": [
+				0.379289835691452,
+				0.379289835691452,
+				0.3792898654937744
+			]
+		},
+		{
+			"parent": 0,
+			"pos": [
+				0.35404253005981445,
+				5.960464477539063e-08,
+				-1.364842414855957
+			],
+			"rot": [
+				-1.9471467282983212e-07,
+				-79.99996948242188,
+				14.999991416931152
+			],
+			"scl": [
+				0.548092782497406,
+				0.5480927228927612,
+				0.5480927228927612
+			]
+		},
+		{
+			"parent": 0,
+			"pos": [
+				-0.9112331867218018,
+				-5.284216034062688e-17,
+				0.8629779815673828
+			],
+			"rot": [
+				-5.515560133062536e-06,
+				39.99998474121094,
+				14.999991416931152
+			],
+			"scl": [
+				0.6965712308883667,
+				0.6965711116790771,
+				0.6965710520744324
+			]
+		},
+		{
+			"parent": 0,
+			"pos": [
+				-0.22473430633544922,
+				2.9802322387695313e-08,
+				1.5840520858764648
+			],
+			"rot": [
+				6.068850040435791,
+				-83.97634887695313,
+				-24.678043365478516
+			],
+			"scl": [
+				0.548092782497406,
+				0.5480928421020508,
+				0.548092782497406
+			]
+		},
+		{
+			"parent": 0,
+			"pos": [
+				1.1490044593811035,
+				2.0519055509880205e-17,
+				-0.3351016044616699
+			],
+			"rot": [
+				-4.292746543884277,
+				38.83576202392578,
+				-24.542633056640625
+			],
+			"scl": [
+				0.37928977608680725,
+				0.37928980588912964,
+				0.3792898654937744
+			]
+		},
+		{
+			"parent": 0,
+			"pos": [
+				-1.0245827436447144,
+				0.4696044921875,
+				-0.9504084587097168
+			],
+			"rot": [
+				-21.2880802154541,
+				90.74384307861328,
+				-13.72494125366211
+			],
+			"scl": [
+				0.26247525215148926,
+				0.26247522234916687,
+				0.26247522234916687
+			]
+		},
+		{
+			"parent": 0,
+			"pos": [
+				0.939429759979248,
+				0.871856689453125,
+				-1.0184688568115234
+			],
+			"rot": [
+				16.502775192260742,
+				136.03958129882813,
+				-0.01005685143172741
+			],
+			"scl": [
+				0.2303755134344101,
+				0.23037554323673248,
+				0.23037561774253845
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				0.0,
+				0.7025331854820251,
+				0.12387556582689285
+			],
+			"rot": [
+				21.102176666259766,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.0,
+				1.0000001192092896,
+				1.0000001192092896
+			]
+		},
+		{
+			"parent": 11,
+			"pos": [
+				0.0,
+				-0.7000201940536499,
+				0.1373661309480667
+			],
+			"rot": [
+				-21.1021785736084,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.0,
+				0.9999998211860657,
+				0.9999998211860657
+			]
+		}
+	]
+}

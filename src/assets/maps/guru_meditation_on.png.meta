@@ -1,0 +1,9 @@
+{
+	"profiles": {
+		"default": {
+			"compression": "BC3",
+			"mag-filter": "Nearest",
+			"min-filter": "Nearest"
+		}
+	}
+}

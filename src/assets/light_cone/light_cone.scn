@@ -1,0 +1,2024 @@
+{
+	"canvas": {
+		"clear_color": true,
+		"clear_z": true,
+		"color": [
+			0,
+			0,
+			0,
+			255
+		]
+	},
+	"environment": {
+		"ambient": [
+			0,
+			0,
+			0,
+			255
+		],
+		"brdf_map": "core/pbr/brdf.dds",
+		"current_camera": null,
+		"fog_color": [
+			255,
+			255,
+			255,
+			255
+		],
+		"fog_far": 0.0,
+		"fog_near": 0.0,
+		"irradiance_map": "core/pbr/probe.hdr.irradiance",
+		"radiance_map": "core/pbr/probe.hdr.radiance"
+	},
+	"key_values": null,
+	"nodes": [
+		{
+			"components": [
+				0,
+				4294967295,
+				0,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 0,
+			"name": "Cone"
+		},
+		{
+			"components": [
+				1,
+				4294967295,
+				1,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 1,
+			"name": "Cone"
+		},
+		{
+			"components": [
+				2,
+				4294967295,
+				2,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 2,
+			"name": "Cone"
+		},
+		{
+			"components": [
+				11,
+				4294967295,
+				11,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 3,
+			"name": "plane"
+		},
+		{
+			"components": [
+				9,
+				4294967295,
+				9,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 4,
+			"name": "plane"
+		},
+		{
+			"components": [
+				10,
+				4294967295,
+				10,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 5,
+			"name": "plane"
+		},
+		{
+			"components": [
+				3,
+				4294967295,
+				3,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 6,
+			"name": "plane"
+		},
+		{
+			"components": [
+				4,
+				4294967295,
+				4,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 7,
+			"name": "plane"
+		},
+		{
+			"components": [
+				5,
+				4294967295,
+				5,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 8,
+			"name": "plane"
+		},
+		{
+			"components": [
+				6,
+				4294967295,
+				6,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 9,
+			"name": "plane"
+		},
+		{
+			"components": [
+				7,
+				4294967295,
+				7,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 10,
+			"name": "plane"
+		},
+		{
+			"components": [
+				8,
+				4294967295,
+				8,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 11,
+			"name": "plane"
+		},
+		{
+			"components": [
+				12,
+				4294967295,
+				12,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 12,
+			"name": "plane"
+		},
+		{
+			"components": [
+				13,
+				4294967295,
+				13,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 13,
+			"name": "plane"
+		},
+		{
+			"components": [
+				14,
+				4294967295,
+				4294967295,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 14,
+			"name": "slices"
+		},
+		{
+			"components": [
+				26,
+				4294967295,
+				4294967295,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 15,
+			"name": "slices"
+		},
+		{
+			"components": [
+				23,
+				4294967295,
+				22,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 16,
+			"name": "plane"
+		},
+		{
+			"components": [
+				21,
+				4294967295,
+				20,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 17,
+			"name": "plane"
+		},
+		{
+			"components": [
+				22,
+				4294967295,
+				21,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 18,
+			"name": "plane"
+		},
+		{
+			"components": [
+				15,
+				4294967295,
+				14,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 19,
+			"name": "plane"
+		},
+		{
+			"components": [
+				16,
+				4294967295,
+				15,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 20,
+			"name": "plane"
+		},
+		{
+			"components": [
+				17,
+				4294967295,
+				16,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 21,
+			"name": "plane"
+		},
+		{
+			"components": [
+				18,
+				4294967295,
+				17,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 22,
+			"name": "plane"
+		},
+		{
+			"components": [
+				19,
+				4294967295,
+				18,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 23,
+			"name": "plane"
+		},
+		{
+			"components": [
+				20,
+				4294967295,
+				19,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 24,
+			"name": "plane"
+		},
+		{
+			"components": [
+				24,
+				4294967295,
+				23,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 25,
+			"name": "plane"
+		},
+		{
+			"components": [
+				25,
+				4294967295,
+				24,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 26,
+			"name": "plane"
+		}
+	],
+	"objects": [
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "dummy_mat"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/light_cone.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.30379748344421387,
+								0.903060257434845,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "light_cone/Cone_37.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "dummy_mat"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/light_cone.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.30379748344421387,
+								0.903060257434845,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "light_cone/Cone_37.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "dummy_mat"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/light_cone.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.7529412508010864,
+								0.6274510025978088,
+								0.803921639919281
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "light_cone/Cone_37.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.6160337924957275,
+								0.5926399827003479,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.9215686917304993
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.8431373238563538
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.7254902124404907
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.6470588445663452
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.5686274766921997
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.6160337924957275,
+								0.5926399827003479,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.6160337924957275,
+								0.5926399827003479,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.6160337924957275,
+								0.5926399827003479,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.4901961088180542
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.4117647409439087
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.6160337924957275,
+								0.5926399827003479,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.960784375667572
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.8823530077934265
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.7647059559822083
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.686274528503418
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.6078431606292725
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.6160337924957275,
+								0.5926399827003479,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.6160337924957275,
+								0.5926399827003479,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.6160337924957275,
+								0.5926399827003479,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.529411792755127
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": "default"
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "disabled",
+					"flags": [],
+					"program": "shaders/alphareflection.hps",
+					"textures": [
+						{
+							"name": "uLightMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 3
+						},
+						{
+							"name": "uReflectionMap",
+							"path": "light_cone/radial_gradient.png",
+							"stage": 7
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.615686297416687,
+								0.5921568870544434,
+								0.45098042488098145
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "primitives/ground.geo"
+		}
+	],
+	"transforms": [
+		{
+			"parent": null,
+			"pos": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"rot": [
+				89.99994659423828,
+				-179.99989318847656,
+				-179.99989318847656
+			],
+			"scl": [
+				1.100000023841858,
+				1.100000023841858,
+				1.100000023841858
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				7.235009032852124e-13,
+				0.5281094312667847,
+				4.5747552235297917e-07
+			],
+			"rot": [
+				89.99994659423828,
+				-179.99989318847656,
+				166.5187530517578
+			],
+			"scl": [
+				0.49999988079071045,
+				0.49999988079071045,
+				0.5
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				-5.949942144881093e-13,
+				-0.4343078136444092,
+				-3.762197309242765e-07
+			],
+			"rot": [
+				89.99994659423828,
+				-179.99989318847656,
+				-179.7024688720703
+			],
+			"scl": [
+				1.9999994039535522,
+				1.9999994039535522,
+				1.75
+			]
+		},
+		{
+			"parent": 14,
+			"pos": [
+				0.0,
+				0.6000000238418579,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.6000000238418579,
+				0.6000000238418579,
+				0.6000000238418579
+			]
+		},
+		{
+			"parent": 14,
+			"pos": [
+				0.0,
+				-0.20000000298023224,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.399999976158142,
+				1.399999976158142,
+				1.399999976158142
+			]
+		},
+		{
+			"parent": 14,
+			"pos": [
+				0.0,
+				-0.4000000059604645,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.600000023841858,
+				1.600000023841858,
+				1.600000023841858
+			]
+		},
+		{
+			"parent": 14,
+			"pos": [
+				0.0,
+				-0.6000000238418579,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.7999999523162842,
+				1.7999999523162842,
+				1.7999999523162842
+			]
+		},
+		{
+			"parent": 14,
+			"pos": [
+				0.0,
+				-0.800000011920929,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				2.0,
+				2.0,
+				2.0
+			]
+		},
+		{
+			"parent": 14,
+			"pos": [
+				0.0,
+				-1.0,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				2.200000047683716,
+				2.200000047683716,
+				2.200000047683716
+			]
+		},
+		{
+			"parent": 14,
+			"pos": [
+				0.0,
+				0.4000000059604645,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.800000011920929,
+				0.800000011920929,
+				0.800000011920929
+			]
+		},
+		{
+			"parent": 14,
+			"pos": [
+				0.0,
+				0.20000000298023224,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.0,
+				1.0,
+				1.0
+			]
+		},
+		{
+			"parent": 14,
+			"pos": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.2000000476837158,
+				1.2000000476837158,
+				1.2000000476837158
+			]
+		},
+		{
+			"parent": 14,
+			"pos": [
+				0.0,
+				-1.2000000476837158,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				2.4000000953674316,
+				2.4000000953674316,
+				2.4000000953674316
+			]
+		},
+		{
+			"parent": 14,
+			"pos": [
+				0.0,
+				-1.399999976158142,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.02797645330429077,
+				0.0
+			],
+			"scl": [
+				2.5999999046325684,
+				2.5999999046325684,
+				2.5999999046325684
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"rot": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.0,
+				1.0,
+				1.0
+			]
+		},
+		{
+			"parent": 15,
+			"pos": [
+				0.0,
+				0.6000000238418579,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.6000000238418579,
+				0.6000000238418579,
+				0.6000000238418579
+			]
+		},
+		{
+			"parent": 15,
+			"pos": [
+				0.0,
+				-0.20000000298023224,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.399999976158142,
+				1.399999976158142,
+				1.399999976158142
+			]
+		},
+		{
+			"parent": 15,
+			"pos": [
+				0.0,
+				-0.4000000059604645,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.600000023841858,
+				1.600000023841858,
+				1.600000023841858
+			]
+		},
+		{
+			"parent": 15,
+			"pos": [
+				0.0,
+				-0.6000000238418579,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.7999999523162842,
+				1.7999999523162842,
+				1.7999999523162842
+			]
+		},
+		{
+			"parent": 15,
+			"pos": [
+				0.0,
+				-0.800000011920929,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				2.0,
+				2.0,
+				2.0
+			]
+		},
+		{
+			"parent": 15,
+			"pos": [
+				0.0,
+				-1.0,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				2.200000047683716,
+				2.200000047683716,
+				2.200000047683716
+			]
+		},
+		{
+			"parent": 15,
+			"pos": [
+				0.0,
+				0.4000000059604645,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.800000011920929,
+				0.800000011920929,
+				0.800000011920929
+			]
+		},
+		{
+			"parent": 15,
+			"pos": [
+				0.0,
+				0.20000000298023224,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.0,
+				1.0,
+				1.0
+			]
+		},
+		{
+			"parent": 15,
+			"pos": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.2000000476837158,
+				1.2000000476837158,
+				1.2000000476837158
+			]
+		},
+		{
+			"parent": 15,
+			"pos": [
+				0.0,
+				-1.2000000476837158,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				2.4000000953674316,
+				2.4000000953674316,
+				2.4000000953674316
+			]
+		},
+		{
+			"parent": 15,
+			"pos": [
+				0.0,
+				-1.399999976158142,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				2.5999999046325684,
+				2.5999999046325684,
+				2.5999999046325684
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				0.0,
+				0.10000000149011612,
+				0.0
+			],
+			"rot": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.0,
+				1.0,
+				1.0
+			]
+		}
+	]
+}

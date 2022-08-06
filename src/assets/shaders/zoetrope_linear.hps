@@ -1,0 +1,8 @@
+{
+	"features": [],
+	"uniforms": [
+		{"name": "uDiffuseMap", "type": "Sampler", "channel": 0},
+		{"name": "uDiffuseColor", "type": "Color", "value": [1.0, 1.0, 1.0, 1.0]},
+		{"name": "uParam", "type": "Vec4", "value": [0.0, 0.0, 0.0, 0.0]}
+	]
+}

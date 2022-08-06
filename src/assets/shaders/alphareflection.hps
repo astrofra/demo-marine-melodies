@@ -1,0 +1,9 @@
+{
+	"features": [],
+	"uniforms": [
+		{"name": "uLightMap", "type": "Sampler", "channel": 3},
+		{"name": "uReflectionMap", "type": "Sampler", "channel": 7},
+		{"name": "uDiffuseColor", "type": "Color"},
+		{"name": "uMatAttribute", "type": "Vec4"}
+	]
+}
