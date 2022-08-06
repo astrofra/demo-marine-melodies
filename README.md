@@ -1,9 +1,11 @@
-# Marine Melodies
+# Marine Melodies :musical_note:
 
 Marine Melodies by [Resistance](http://resistance.no/).
 
-A PC Music Disk, 9 electro & hip/hop tracks composed by Erk, Nainain, GliGli, Aceman, mAZE, Riddlemak, WillBe.
-Follow the submarine exploration and listen to our songs from the deep.
+A PC **Music Disk**, 9 electro & hip/hop tracks composed by Erk, Nainain, GliGli, Aceman, mAZE, Riddlemak, WillBe.<br>
+_Follow the submarine exploration and listen to our songs from the deep._
+
+![](https://github.com/astrofra/demo-marine-melodies/raw/main/img/marine-melodies-screenshot_000.png)
 
 ### Credits
 
