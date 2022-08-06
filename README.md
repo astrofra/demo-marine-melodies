@@ -35,5 +35,5 @@ _Follow the submarine exploration and listen to our songs from the deep._
    * just set the resolution of your screen and select `undecorated
    * or: select the closest resolution and select `fullscreen`
    * or: select the closest resolution and select a specific monitor (from 1 to 3)
-* the music disk won't run :(
+* the music disk won't run :cry:
    * The code needs the latest VS Redist to run, get it from: [Microsoft website](https://aka.ms/vs/17/release/vc_redist.x64.exe)
