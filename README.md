@@ -28,7 +28,7 @@ _Follow the submarine exploration and listen to our songs from the deep._
    
 ### :warning: Troubleshooting
 
-* the framerate is super low :(
+* the framerate is super low :cry:
    * try the classic mode
    * lower the screen resolution
 * can't open it in fullscreen
