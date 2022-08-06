@@ -12,7 +12,7 @@ _Follow the submarine exploration and listen to our songs from the deep._
 * Music : Erk, Nainain, GliGli, Aceman, mAZE, Riddlemak, WillBe
 * Code : Fra, Erk
 * 3D engine : Xbarr, Mooz, Scorpheus, Kipixelle
-* Based on [HARFANG 3D](www.github.com/harfang3d)
+* Based on [HARFANG 3D](http://www.github.com/harfang3d)
 
 ### How to run it?
 
