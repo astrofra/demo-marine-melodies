@@ -3,8 +3,10 @@
 Marine Melodies by [Resistance](http://resistance.no/).
 
 A PC **Music Disk**, 9 electro & hip/hop tracks composed by Erk, Nainain, GliGli, Aceman, mAZE, Riddlemak, WillBe.<br>
-_Follow the submarine exploration and listen to our songs from the deep._<br>
-Check & comment the production on [Pouet.net](https://www.pouet.net/prod.php?which=91906)!
+_Follow the submarine exploration and listen to our songs from the deep._
+
+* Check & comment the production on [Pouet.net](https://www.pouet.net/prod.php?which=91906)!
+* Watch the video version on [Youtube](https://www.youtube.com/watch?v=tpzKMSOpD8w)
 
 ![](https://github.com/astrofra/demo-marine-melodies/raw/main/img/marine-melodies-screenshot_000.png)
 
