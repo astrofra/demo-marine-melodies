@@ -30,6 +30,8 @@ _Follow the submarine exploration and listen to our songs from the deep._
    
 ### Lua or Python ?
 The original version of **Marine Melodies** was written in **Lua**. For educational purposes, I have made a port to the **Python** language.
+* If you are interested in Python, just ignore the Lua files.
+* If you are interested in Lua, just ignore the Python files.
     
 ### :warning: Troubleshooting
 
