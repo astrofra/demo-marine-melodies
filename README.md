@@ -28,7 +28,9 @@ _Follow the submarine exploration and listen to our songs from the deep._
 * once the demo is running, the walkman is interactive
    * click on the buttons to select previous & next song, in `Repeat/Next` Song mode.
    
-   
+### Lua or Python ?
+The original version of **Marine Melodies** was written in **Lua**. For educational purposes, I have made a port to the **Python** language.
+    
 ### :warning: Troubleshooting
 
 * the framerate is super low :cry:
