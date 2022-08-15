@@ -55,8 +55,8 @@ def config_gui():
 
             # apply preset if a combo entry was selected
             if res_modified:
-                default_res_x = res_list[res_preset + 1][1]
-                default_res_y = res_list[res_preset + 1][2]
+                default_res_x = res_list[res_preset][0]
+                default_res_y = res_list[res_preset][1]
             # end
 
             # fullscreen_modified, default_fullscreen = hg.ImGuiCheckBox("Fullscreen", default_fullscreen)
@@ -64,7 +64,7 @@ def config_gui():
 
             # apply preset if a combo entry was selected
             if fullscreen_modified:
-                default_fullscreen = mode_list[fullscreen_preset + 1]
+                default_fullscreen = mode_list[fullscreen_preset]
             # end
 
             # Rendering settings
