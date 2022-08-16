@@ -8,7 +8,7 @@ def anim_player(scene, anims, anim_has_started, playing_anim, current_anim):
 	else:
 		if playing_anim is None or scene.IsPlaying(playing_anim) == False:
 			current_anim = current_anim + 1
-			if current_anim > len(anims):
+			if current_anim >= len(anims):
 				current_anim = 0
 			# end
 			playing_anim = scene.PlayAnim(scene.GetSceneAnim(anims[current_anim]))

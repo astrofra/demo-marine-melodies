@@ -12,10 +12,10 @@ from utils import *
 # riddlemak "AI"
 
 # button index -> walkman def (play, stop, ...)
-WALKMAN_PREV = 1
-WALKMAN_PLAY = 2
-WALKMAN_NEXT = 3
-WALKMAN_MODE = 4
+WALKMAN_PREV = 0
+WALKMAN_PLAY = 1
+WALKMAN_NEXT = 2
+WALKMAN_MODE = 3
 
 # map the song title to the vertical position
 # in the songs titles textures
@@ -69,7 +69,7 @@ def hover_objects_test(objects_list, camera, resolution, mouse_position, object_
 def get_hovered_button(scene, buttons, mouse_pos, resolution, lines=[]):
 	idx, button_hover, lines = hover_objects_test(buttons, scene.GetCurrentCamera(), resolution, mouse_pos, 0.4, lines)
 	if button_hover is not None:
-		# print("button " + idx)
+		# print("button " + str(idx))
 		return idx, lines
 	# end
 
@@ -236,10 +236,10 @@ def song_player_update(song_player, walkman_osd, walkman_button_change_state, wa
 	# end
 
 	# wrap around the music index
-	if song_player["current_song_idx"] > len(song_player["titles"]):
-		song_player["current_song_idx"] = 1
-	elif song_player["current_song_idx"] < 1:
-			song_player["current_song_idx"] = len(song_player["titles"])
+	if song_player["current_song_idx"] > len(song_player["titles"]) - 1:
+		song_player["current_song_idx"] = 0
+	elif song_player["current_song_idx"] < 0:
+			song_player["current_song_idx"] = len(song_player["titles"]) - 1
 	# end
 
 	# autopress PLAY if PREV/NEXT where pressed

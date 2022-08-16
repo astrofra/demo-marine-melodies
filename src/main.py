@@ -230,7 +230,7 @@ def main():
 		walkman_button_pressed = -1
 		walkman_button_pressed_timeout = hg.GetClock()
 		walkman_buttons_nodes = []
-		for i in range(3):
+		for i in range(4):
 			nd = scene.GetNode("walkman_click_zone_" + str(i))
 			if nd.IsValid():
 				walkman_buttons_nodes.append(nd)
@@ -257,7 +257,7 @@ def main():
 				"riddlemak_ia",
 			],
 			"durations":[],
-			"current_song_idx":1,
+			"current_song_idx":0,
 			"current_song_timestamp":-1,
 			"repeat_mode":False,
 			"song_ref":None
