@@ -1,14 +1,14 @@
 require("utils")
 
 -- song lists
--- erk : "Electronics Underground"
 -- erk : "Elsewhere"
--- erk : "Mountains City"
--- mAZE : "6502 Fathoms"
--- willBe : "Coral Pillows"
--- nainain : "Sweet Mermaids"
 -- aceman : "Of Lobsters and Men"
+-- nainain : "Sweet Mermaids"
+-- willBe : "Coral Pillows"
+-- mAZE : "6502 Fathoms"
+-- erk : "Mountains City"
 -- gligli "Underwater"
+-- erk : "Electronics Underground"
 -- riddlemak "AI"
 
 -- button index -> walkman function (play, stop, ...)
