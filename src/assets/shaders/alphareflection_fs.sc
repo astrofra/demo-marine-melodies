@@ -35,7 +35,7 @@ void main() {
 
 	color *= uDiffuseColor.xzy;
 
-	color = pow(color, 1.5) * 1.5 * uDiffuseColor.w;
+	color = pow(color, vec3(1.5, 1.5, 1.5)) * 1.5 * uDiffuseColor.w;
 
 	gl_FragColor = vec4(color, uDiffuseColor.w);
 }
