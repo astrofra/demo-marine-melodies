@@ -4,7 +4,7 @@ import subprocess
 
 def main():
     print(os.getcwd())
-    audio_path = 'assets\\audio'
+    audio_path = os.path.join('assets', 'audio')
     # audio_path = '..\\..\\assets\\audio'
     # open output lua file
     with open('songs_data.lua', 'w') as out:
@@ -13,10 +13,15 @@ def main():
         # get list of ogg files
         files = os.listdir(audio_path)
         for ogg_file in files:
-            ogg_path = audio_path + '\\' + ogg_file
+            ogg_path = os.path.join(audio_path, ogg_file)
             print(ogg_path)
-            cmd_line = ['bin\\sox\\sox.exe', '--i', ogg_path]
-            result = subprocess.run(cmd_line, stdout=subprocess.PIPE)
+            try:
+                cmd_line = [os.path.join('bin','sox','sox'), '--i', ogg_path]
+                result = subprocess.run(cmd_line, stdout=subprocess.PIPE)
+            except:
+                cmd_line = ['sox', '--i', ogg_path]
+                result = subprocess.run(cmd_line, stdout=subprocess.PIPE)
+
             r = result.stdout.decode()
             r = r.split('\n')
             print(r)
