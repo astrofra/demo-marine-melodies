@@ -23,7 +23,7 @@ function draw_line(pos_a, pos_b, line_color, vid, vtx_line_layout, line_shader)
 end
 
 function main(cmd_arg)
-	local config = {enable_aaa=true, low_aaa=false, dont_skip_intro=true}
+	local config = {enable_aaa=true, low_aaa=false, skip_intro=false}
 	local i
 
 	-- hg.SetLogLevel(hg.LL_Normal)
@@ -359,7 +359,7 @@ function main(cmd_arg)
 
 		hg.HideCursor()
 
-		if config.dont_skip_intro then
+		if config.skip_intro == false then
 			while not hg.ReadKeyboard():Key(hg.K_Escape) and hg.IsWindowOpen(win) and intro_current_anim < #intro_anims do
 
 				intro_anim_has_started, intro_playing_anim, intro_current_anim = anim_player(scene_intro, intro_anims, intro_anim_has_started, intro_playing_anim, intro_current_anim)

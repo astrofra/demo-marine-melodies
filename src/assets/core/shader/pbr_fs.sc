@@ -1,5 +1,6 @@
 $input vWorldPos, vNormal, vTangent, vBinormal, vTexCoord0, vTexCoord1, vLinearShadowCoord0, vLinearShadowCoord1, vLinearShadowCoord2, vLinearShadowCoord3, vSpotShadowCoord, vProjPos, vPrevProjPos
 
+// HARFANG(R) Copyright (C) 2022 Emmanuel Julien, NWNC HARFANG. Released under GPL/LGPL/Commercial Licence, see licence.txt for details.
 #include <forward_pipeline.sh>
 #include <pbr_patch.sh>
 
@@ -39,15 +40,14 @@ float SampleShadowPCF(sampler2DShadow map, vec4 coord, float inv_pixel_size, flo
 	float k = 0.0;
 
 #if FORWARD_PIPELINE_AAA
-	#define PCF_SAMPLE_COUNT 2.0 // 3x3
+	#define PCF_SAMPLE_COUNT 2 // 3x3
 
-//	float weights[9] = {0.024879, 0.107973, 0.024879, 0.107973, 0.468592, 0.107973, 0.024879, 0.107973, 0.024879};
-	float weights[9] = {0.011147, 0.083286, 0.011147, 0.083286, 0.622269, 0.083286, 0.011147, 0.083286, 0.011147};
+	ARRAY_BEGIN(float, weights, 9) 0.011147, 0.083286, 0.011147, 0.083286, 0.622269, 0.083286, 0.011147, 0.083286, 0.011147 ARRAY_END();
 
-	for (float j = 0.0; j <= PCF_SAMPLE_COUNT; ++j) {
-		float v = 6.0 * (j + jitter.y) / PCF_SAMPLE_COUNT - 1.0;
-		for (float i = 0.0; i <= PCF_SAMPLE_COUNT; ++i) {
-			float u = 6.0 * (i + jitter.x) / PCF_SAMPLE_COUNT - 1.0;
+	for (int j = 0; j <= PCF_SAMPLE_COUNT; ++j) {
+		float v = 6.0 * (float(j) + jitter.y) / float(PCF_SAMPLE_COUNT) - 1.0;
+		for (int i = 0; i <= PCF_SAMPLE_COUNT; ++i) {
+			float u = 6.0 * (float(i) + jitter.x) / float(PCF_SAMPLE_COUNT) - 1.0;
 			k += SampleHardShadow(map, coord + vec4(vec2(u, v) * k_pixel_size, 0.0, 0.0), bias) * weights[j * 3 + i];
 		}
 	}
@@ -146,7 +146,7 @@ void main() {
 	vec4 self = uSelfColor;
 #endif // USE_SELF_MAP
 
-	self = pow(self, uSelfCtrl.x) * uSelfCtrl.y;
+	self = pow(self, vec4(uSelfCtrl.x, uSelfCtrl.x, uSelfCtrl.x, 1.0)) * uSelfCtrl.y;
 
 	//
 	vec3 view = mul(u_view, vec4(vWorldPos, 1.0)).xyz;
@@ -256,7 +256,7 @@ void main() {
 	vec4 ss_radiance = texture2D(uSSRadianceMap, gl_FragCoord.xy / uResolution.xy);
 
 	irradiance = ss_irradiance.xyz; // mix(irradiance, ss_irradiance, ss_irradiance.w);
-	radiance = mix(radiance, ss_radiance, ss_radiance.w);
+	radiance = mix(radiance, ss_radiance.xyz, ss_radiance.w);
 #endif
 
 	vec3 diffuse = irradiance * base_opacity.xyz;
@@ -303,5 +303,7 @@ void main() {
 
 	gl_FragColor = vec4(color, opacity);
 #endif // FORWARD_PIPELINE_AAA_PREPASS
+#else
+	gl_FragColor = vec4_splat(0.0); // note: fix required to stop glsl-optimizer from removing the whole function body
 #endif // DEPTH_ONLY
 }
