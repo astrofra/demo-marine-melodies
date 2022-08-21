@@ -29,3 +29,11 @@ function EaseInOutQuick(x)
 	x = clamp(x, 0.0, 1.0)
 	return	(x * x * (3 - 2 * x))
 end
+
+function IsLinux()
+    if package.config:sub(1,1) == '/' then
+        return true
+    else
+        return false
+    end
+end

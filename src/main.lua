@@ -7,6 +7,7 @@ require("bubbles")
 require("animations")
 require("walkman")
 require("config_gui")
+require("utils")
 songs_data = require("songs_data")
 
 -- credits
@@ -32,7 +33,11 @@ function main(cmd_arg)
 	hg.AudioInit()
 	hg.WindowSystemInit()
 
-	hg.AddAssetsFolder("assetsc")
+	if IsLinux() then
+		hg.AddAssetsFolder("../assetsc")
+	else
+		hg.AddAssetsFolder("assetsc")
+	end
 
 	-- resolution selection --------------------------------------------------------------------------------
 	local win
