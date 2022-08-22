@@ -495,13 +495,13 @@ function main(cmd_arg)
 			-- main framebuffer
 			local view_id = 0
 			local pass_ids
-			-- if config.enable_aaa then
-			-- 	view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res, pipeline_aaa, pipeline_aaa_config, frame, frame_buffer.handle)
-			-- else
-			-- 	view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res, frame_buffer.handle)
-			-- end
+			if config.enable_aaa then
+				view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res, pipeline_aaa, pipeline_aaa_config, frame, frame_buffer.handle)
+			else
+				view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res, frame_buffer.handle)
+			end
 
-			view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res)
+			-- view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res)
 
 			-- debug draw lines
 			local opaque_view_id = hg.GetSceneForwardPipelinePassViewId(pass_ids, hg.SFPP_Opaque)
@@ -528,21 +528,21 @@ function main(cmd_arg)
 			-- draw the render texture on a quad
 			hg.SetViewPerspective(view_id, 0, 0, res_x, res_y, hg.TranslationMat4(hg.Vec3(0, 0, -0.5)))
 
-			-- -- final compositing
-			-- fade = math.min(1.0, fade + dts * 0.35)
-			-- fade_pow = 2.0 - EaseInOutQuick(fade);
+			-- final compositing
+			fade = math.min(1.0, fade + dts * 0.35)
+			fade_pow = 2.0 - EaseInOutQuick(fade);
 
-			-- local val_uniforms, tex_uniforms
-			-- val_uniforms = {hg.MakeUniformSetValue('color', hg.Vec4(1, 1, 1, 1)),
-			-- 				hg.MakeUniformSetValue('fade', hg.Vec4(EaseInOutQuick(fade), fade_pow, 0.0, 0.0)),
-			-- 				hg.MakeUniformSetValue('uClock', hg.Vec4(hg.time_to_sec_f(clock), 0.1, 0.0, 0.0)),
-			-- 				hg.MakeUniformSetValue('uZFrustum', hg.Vec4(z_near, z_far, fov, 0))
-			-- 			}
-			-- tex_uniforms = {hg.MakeUniformSetTexture('s_tex', color, 0), hg.MakeUniformSetTexture('s_depth', depth, 1), 
-			-- 				hg.MakeUniformSetTexture('b_tex', bubble_color, 2), hg.MakeUniformSetTexture('b_depth', bubble_depth, 3)}
+			local val_uniforms, tex_uniforms
+			val_uniforms = {hg.MakeUniformSetValue('color', hg.Vec4(1, 1, 1, 1)),
+							hg.MakeUniformSetValue('fade', hg.Vec4(EaseInOutQuick(fade), fade_pow, 0.0, 0.0)),
+							hg.MakeUniformSetValue('uClock', hg.Vec4(hg.time_to_sec_f(clock), 0.1, 0.0, 0.0)),
+							hg.MakeUniformSetValue('uZFrustum', hg.Vec4(z_near, z_far, fov, 0))
+						}
+			tex_uniforms = {hg.MakeUniformSetTexture('s_tex', color, 0), hg.MakeUniformSetTexture('s_depth', depth, 1), 
+							hg.MakeUniformSetTexture('b_tex', bubble_color, 2), hg.MakeUniformSetTexture('b_depth', bubble_depth, 3)}
 
-			-- hg.DrawModel(view_id, screen_mdl, screen_prg, val_uniforms, tex_uniforms, 
-			-- 			hg.TransformationMat4(hg.Vec3(0, 0, 0), hg.Vec3(math.pi / 2, math.pi, 0)))
+			hg.DrawModel(view_id, screen_mdl, screen_prg, val_uniforms, tex_uniforms, 
+						hg.TransformationMat4(hg.Vec3(0, 0, 0), hg.Vec3(math.pi / 2, math.pi, 0)))
 
 			view_id = view_id + 1
 			hg.SetView2D(view_id, 0, 0, res_x, res_y, -1, 1, hg.CF_None, hg.Color.Black, 1, 0)
