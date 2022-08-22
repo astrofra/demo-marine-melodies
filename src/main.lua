@@ -74,7 +74,7 @@ function main(cmd_arg)
 
 		-- local win = hg.RenderInit('Minisub Escape', res_x, res_y, hg.RF_VSync | hg.RF_MSAA4X)
 		win = hg.NewWindow("Marine Melodies^Resistance(2022)", res_x, res_y, 32, default_fullscreen) --, hg.WV_Fullscreen)
-		hg.RenderInit(win)
+		hg.RenderInit(win, hg.RT_OpenGL)
 		hg.RenderReset(res_x, res_y, hg.RF_MSAA4X | hg.RF_MaxAnisotropy)
 
 		-- create pipeline
