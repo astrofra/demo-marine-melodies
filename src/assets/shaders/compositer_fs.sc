@@ -169,14 +169,14 @@ void main() {
 	g = pow(g, fade.y);
 	b = pow(b, fade.y);
 
-	// gl_FragColor = vec4(r, g, b, 1.0);
+	gl_FragColor = vec4(r, g, b, 1.0);
 
 	// debug outputs
 	// gl_FragColor = vec4(dispersion, dispersion, dispersion, 1.0);
 	// gl_FragColor = vec4(vignette, vignette, vignette, 1.0);
 	// gl_FragColor = vec4(refl, 1.0);
 	// gl_FragColor = texture2D(s_tex, UV0);
-	gl_FragColor = texture2D(s_tex, UV0) + texture2D(b_tex, UV0);
+	// gl_FragColor = texture2D(s_tex, UV0) + texture2D(b_tex, UV0);
 	// gl_FragColor = texture2D(b_tex, UV0);
 	// gl_FragColor = vec4(z, z, z, 1.0);
 	// gl_FragColor = vec4(zb, zb, zb, 1.0);
