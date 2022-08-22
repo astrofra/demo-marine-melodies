@@ -142,9 +142,7 @@ void main() {
 
 	// Bubble (fake fresnel) edges
 	float bubble_edges = pow(bubble_rgb.z, 4.0) * 0.75 * z; // * vignette;
-	// r *= (1.0 + bubble_edges);
-	// g *= (1.0 + bubble_edges);
-	// b *= (1.0 + bubble_edges);
+
 	r *= (1.0 - bubble_edges);
 	g *= (1.0 - bubble_edges);
 	b *= (1.0 - bubble_edges);
@@ -165,13 +163,13 @@ void main() {
 	g = pow(g, fade.y);
 	b = pow(b, fade.y);
 
-	gl_FragColor = vec4(r, g, b, 1.0);
+	// gl_FragColor = vec4(r, g, b, 1.0);
 
 	// debug outputs
 	// gl_FragColor = vec4(dispersion, dispersion, dispersion, 1.0);
 	// gl_FragColor = vec4(vignette, vignette, vignette, 1.0);
 	// gl_FragColor = vec4(refl, 1.0);
-	// gl_FragColor = texture2D(s_tex, v_texcoord0);
+	gl_FragColor = texture2D(s_tex, v_texcoord0);
 	// gl_FragColor = texture2D(s_tex, v_texcoord0) + texture2D(b_tex, v_texcoord0);
 	// gl_FragColor = texture2D(b_tex, v_texcoord0);
 	// gl_FragColor = vec4(z, z, z, 1.0);
