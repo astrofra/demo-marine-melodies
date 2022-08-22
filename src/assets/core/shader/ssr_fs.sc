@@ -97,6 +97,7 @@ void main() {
 	}
 
 	color /= sample_count * sample_count;
+	color = (saturate(color) / 32.0) * 32.0;
 #endif
 
 	gl_FragColor = color;
