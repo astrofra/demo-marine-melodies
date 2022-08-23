@@ -81,13 +81,19 @@ void main() {
 
 	// distort buffer along a wavy fx
 	vec2 waveUV0;
+
 	waveUV0.x = 0.5 * sin((UV0.x + uClock.x * 0.175) * WAV_FREQ_X + sin((UV0.y + uClock.x) * 2.5));
 	waveUV0.y = 0.5 * cos((UV0.y + uClock.x * 0.35) * WAV_FREQ_Y + cos((PI * 0.1245 + (UV0.x + uClock.x * 0.25)) * 15.0));
 #if 1
 	waveUV0.x = mix(waveUV0.x, sin(waveUV0.x * 3.0), 0.5);
 	waveUV0.y = mix(waveUV0.y, cos(waveUV0.y * 4.0), 0.5);
-	waveUV0.x -= 4.0 * pow(waveUV0.x, 4.0);
-	waveUV0.y -= 4.0 * pow(waveUV0.y, 4.0);
+
+	// waveUV0.x = mod(waveUV0.x + 4.0 * pow(waveUV0.x, 4.0), 1.0);
+	// waveUV0.y = mod(waveUV0.x + 4.0 * pow(waveUV0.y, 4.0), 1.0);
+
+	waveUV0.x = waveUV0.x - 4.0 * pow((waveUV0.x + 1.0) * 0.5, 4.0);
+	waveUV0.y = waveUV0.x - 4.0 * pow((waveUV0.y + 1.0) * 0.5, 4.0);
+
 #endif
 	float overscan = clamp(map(UV0.x, 0.0, 0.05, 0.0, 1.0), 0.0, 1.0);
 	overscan *= clamp(map(UV0.x, 0.95, 1.0, 1.0, 0.0), 0.0, 1.0);
@@ -172,6 +178,7 @@ void main() {
 	gl_FragColor = vec4(r, g, b, 1.0);
 
 	// debug outputs
+	// gl_FragColor = vec4(UV0.x + waveUV0.x, UV0.y + waveUV0.y, 0.0, 1.0);
 	// gl_FragColor = vec4(dispersion, dispersion, dispersion, 1.0);
 	// gl_FragColor = vec4(vignette, vignette, vignette, 1.0);
 	// gl_FragColor = vec4(refl, 1.0);
