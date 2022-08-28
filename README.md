@@ -17,11 +17,22 @@ _Follow the submarine exploration and listen to our songs from the deep._
 * 3D engine : Xbarr, Mooz, Scorpheus, Kipixelle
 * Based on [HARFANG 3D](http://www.github.com/harfang3d) and [BGFX](https://github.com/bkaradzic/bgfx)
 
-### How to run it?
+### How to run it? (_Windows 64_)
 
-* find a PC running Windows 64
+* find a PC running **Windows 64**
 * unzip the zip
 * run `start.bat`
+* select your resolution and screen mode
+   * `full AAA`/`low AAA` modes might require a recent GPU
+   * `classic` mode is made for low-end GPUs
+* once the demo is running, the walkman is interactive
+   * click on the buttons to select previous & next song, in `Repeat/Next` Song mode.
+   
+### How to run it? (_Linux x64_)
+
+* find a PC running **Ubuntu 20.04 LTS**
+* untar the tar.xz file
+* run ./start-demo.sh
 * select your resolution and screen mode
    * `full AAA`/`low AAA` modes might require a recent GPU
    * `classic` mode is made for low-end GPUs
