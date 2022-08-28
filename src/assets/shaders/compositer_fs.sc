@@ -42,7 +42,13 @@ float get_zFromDepth(float zDepth)
 
 void main() {
 	// fix UV orientation
+	// vec2 UV0 = vec2(1.0, 0.0) + vec2(-1.0, 1.0) * v_texcoord0;
+
+#if BGFX_SHADER_LANGUAGE_GLSL
+	vec2 UV0 = vec2(1.0, 1.0) + vec2(-1.0, -1.0) * v_texcoord0;
+#else
 	vec2 UV0 = vec2(1.0, 0.0) + vec2(-1.0, 1.0) * v_texcoord0;
+#endif
 
 	// fake vignette (only affects the border of the image)
 	float vignette = mix(clamp(map(UV0.x, 0.0, 0.25, 0.0, 1.0), 0.0, 1.0), clamp(map(UV0.x, 0.0, 0.25, 0.0, 1.0), 0.75, 1.0), UV0.y);
@@ -75,13 +81,19 @@ void main() {
 
 	// distort buffer along a wavy fx
 	vec2 waveUV0;
+
 	waveUV0.x = 0.5 * sin((UV0.x + uClock.x * 0.175) * WAV_FREQ_X + sin((UV0.y + uClock.x) * 2.5));
 	waveUV0.y = 0.5 * cos((UV0.y + uClock.x * 0.35) * WAV_FREQ_Y + cos((PI * 0.1245 + (UV0.x + uClock.x * 0.25)) * 15.0));
 #if 1
 	waveUV0.x = mix(waveUV0.x, sin(waveUV0.x * 3.0), 0.5);
 	waveUV0.y = mix(waveUV0.y, cos(waveUV0.y * 4.0), 0.5);
-	waveUV0.x -= 4.0 * pow(waveUV0.x, 4.0);
-	waveUV0.y -= 4.0 * pow(waveUV0.y, 4.0);
+
+	// waveUV0.x = mod(waveUV0.x + 4.0 * pow(waveUV0.x, 4.0), 1.0);
+	// waveUV0.y = mod(waveUV0.x + 4.0 * pow(waveUV0.y, 4.0), 1.0);
+
+	waveUV0.x = waveUV0.x - 4.0 * pow((waveUV0.x + 1.0) * 0.5, 4.0);
+	waveUV0.y = waveUV0.x - 4.0 * pow((waveUV0.y + 1.0) * 0.5, 4.0);
+
 #endif
 	float overscan = clamp(map(UV0.x, 0.0, 0.05, 0.0, 1.0), 0.0, 1.0);
 	overscan *= clamp(map(UV0.x, 0.95, 1.0, 1.0, 0.0), 0.0, 1.0);
@@ -142,9 +154,7 @@ void main() {
 
 	// Bubble (fake fresnel) edges
 	float bubble_edges = pow(bubble_rgb.z, 4.0) * 0.75 * z; // * vignette;
-	// r *= (1.0 + bubble_edges);
-	// g *= (1.0 + bubble_edges);
-	// b *= (1.0 + bubble_edges);
+
 	r *= (1.0 - bubble_edges);
 	g *= (1.0 - bubble_edges);
 	b *= (1.0 - bubble_edges);
@@ -168,12 +178,13 @@ void main() {
 	gl_FragColor = vec4(r, g, b, 1.0);
 
 	// debug outputs
+	// gl_FragColor = vec4(UV0.x + waveUV0.x, UV0.y + waveUV0.y, 0.0, 1.0);
 	// gl_FragColor = vec4(dispersion, dispersion, dispersion, 1.0);
 	// gl_FragColor = vec4(vignette, vignette, vignette, 1.0);
 	// gl_FragColor = vec4(refl, 1.0);
-	// gl_FragColor = texture2D(s_tex, v_texcoord0);
-	// gl_FragColor = texture2D(s_tex, v_texcoord0) + texture2D(b_tex, v_texcoord0);
-	// gl_FragColor = texture2D(b_tex, v_texcoord0);
+	// gl_FragColor = texture2D(s_tex, UV0);
+	// gl_FragColor = texture2D(s_tex, UV0) + texture2D(b_tex, UV0);
+	// gl_FragColor = texture2D(b_tex, UV0);
 	// gl_FragColor = vec4(z, z, z, 1.0);
 	// gl_FragColor = vec4(zb, zb, zb, 1.0);
 	// gl_FragColor = vec4(bubble_rgb.x, bubble_rgb.y, bubble_rgb.z, 1.0);

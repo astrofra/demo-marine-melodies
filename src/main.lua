@@ -7,6 +7,7 @@ require("bubbles")
 require("animations")
 require("walkman")
 require("config_gui")
+require("utils")
 songs_data = require("songs_data")
 
 -- credits
@@ -23,7 +24,7 @@ function draw_line(pos_a, pos_b, line_color, vid, vtx_line_layout, line_shader)
 end
 
 function main(cmd_arg)
-	local config = {enable_aaa=true, low_aaa=false, dont_skip_intro=true}
+	local config = {enable_aaa=true, low_aaa=false, skip_intro=false}
 	local i
 
 	-- hg.SetLogLevel(hg.LL_Normal)
@@ -32,7 +33,11 @@ function main(cmd_arg)
 	hg.AudioInit()
 	hg.WindowSystemInit()
 
-	hg.AddAssetsFolder("assetsc")
+	if IsLinux() then
+		hg.AddAssetsFolder("../assetsc")
+	else
+		hg.AddAssetsFolder("assetsc")
+	end
 
 	-- resolution selection --------------------------------------------------------------------------------
 	local win
@@ -69,7 +74,7 @@ function main(cmd_arg)
 
 		-- local win = hg.RenderInit('Minisub Escape', res_x, res_y, hg.RF_VSync | hg.RF_MSAA4X)
 		win = hg.NewWindow("Marine Melodies^Resistance(2022)", res_x, res_y, 32, default_fullscreen) --, hg.WV_Fullscreen)
-		hg.RenderInit(win)
+		hg.RenderInit(win) --, hg.RT_OpenGL)
 		hg.RenderReset(res_x, res_y, hg.RF_MSAA4X | hg.RF_MaxAnisotropy)
 
 		-- create pipeline
@@ -359,7 +364,7 @@ function main(cmd_arg)
 
 		hg.HideCursor()
 
-		if config.dont_skip_intro then
+		if config.skip_intro == false then
 			while not hg.ReadKeyboard():Key(hg.K_Escape) and hg.IsWindowOpen(win) and intro_current_anim < #intro_anims do
 
 				intro_anim_has_started, intro_playing_anim, intro_current_anim = anim_player(scene_intro, intro_anims, intro_anim_has_started, intro_playing_anim, intro_current_anim)
@@ -495,6 +500,8 @@ function main(cmd_arg)
 			else
 				view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res, frame_buffer.handle)
 			end
+
+			-- view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res)
 
 			-- debug draw lines
 			local opaque_view_id = hg.GetSceneForwardPipelinePassViewId(pass_ids, hg.SFPP_Opaque)

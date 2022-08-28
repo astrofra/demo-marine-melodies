@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+		{
+			"name": "Demo AAA",
+			"type": "lua",
+			"request": "launch",
+			"stopOnEntry": false,
+			"program": "${file}",
+			"cwd": "${workspaceFolder}/",
+			"luaexe": "${workspaceFolder}/bin/hg_lua-win-x64/lua.exe",
+		},
+		{
+			"name": "Demo noAAA",
+			"type": "lua",
+			"request": "launch",
+			"stopOnEntry": false,
+			"program": "${file}",
+			"cwd": "${workspaceFolder}/",
+			"arg": ["--noAAA"],
+			"luaexe": "${workspaceFolder}/bin/hg_lua-win-x64/lua.exe",
+		}
+    ]
+}

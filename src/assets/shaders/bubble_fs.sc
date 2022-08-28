@@ -228,10 +228,10 @@ void main() {
 	;
 #else // DEPTH_ONLY
 #if FORWARD_PIPELINE_AAA_PREPASS
-	vec3 N_view = mul(u_view, vec4(N, 0)).xyz;
+	vec3 N_view = mul(u_view, vec4(N, 0.0)).xyz;
 	vec2 velocity = vec2(vProjPos.xy / vProjPos.w - vPrevProjPos.xy / vPrevProjPos.w);
 	gl_FragData[0] = vec4(N_view.xyz, vProjPos.z);
-	gl_FragData[1] = vec4(velocity.xy, gloss, 0.); //
+	gl_FragData[1] = vec4(velocity.xy, gloss, 0.0); //
 #else // FORWARD_PIPELINE_AAA_PREPASS
 	// incorrectly apply gamma correction at fragment shader level in the non-AAA pipeline
 #if FORWARD_PIPELINE_AAA != 1
@@ -241,7 +241,7 @@ void main() {
 
 	float NdotV = clamp(dot(N, V), 0.0, 0.99);
 	float frn = fresnel_fast_2(NdotV, 0.01, 0.5);
-	vec2 view_normal = mul(u_view, N).xy * vec2(0.5, 0.5) + vec2(0.5, 0.5);
+	vec2 view_normal = mul(u_view, vec4(N, 0.0)).xy * vec2(0.5, 0.5) + vec2(0.5, 0.5);
 	gl_FragColor = vec4(view_normal * frn, frn, 0.0); // vec4(color, opacity);
 #endif // FORWARD_PIPELINE_AAA_PREPASS
 #endif // DEPTH_ONLY
