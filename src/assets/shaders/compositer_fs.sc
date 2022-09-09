@@ -16,9 +16,11 @@ uniform vec4 fade;
 uniform vec4 uClock;
 uniform vec4 uZFrustum; // z_near, z_far, fov, ___
 SAMPLER2D(s_tex, 0); // main framebuffer
+#if !BGFX_SHADER_LANGUAGE_GLSL
 SAMPLER2D(s_depth, 1);
 SAMPLER2D(b_tex, 2); // framebuffer for "bubbles fx"
 SAMPLER2D(b_depth, 3);
+#endif
 
 #define WAV_FREQ_X 15.0
 #define WAV_FREQ_Y 6.0
@@ -57,8 +59,11 @@ void main() {
 	vignette *= mix(clamp(map(UV0.y, 0.75, 1.0, 1.0, 0.0), 0.75, 1.0), clamp(map(UV0.y, 0.75, 1.0, 1.0, 0.0), 0.0, 1.0), UV0.x);
 	float inv_vignette = ((1.0 - vignette) * 5.0) + 1.0;
 
+	float zb = 0.0;
+	float i, j;
+#if !BGFX_SHADER_LANGUAGE_GLSL
 	// get bubble masked by landscape
-	float i, j, z;
+	float z;
 	vec2 o;
 	// float z_bg = 0.0, z_bubbles = 0.0;
 	for(j = 0; j < MAX_BLUR_SAMPLE; j++)
@@ -74,8 +79,9 @@ void main() {
 	z /= (MAX_BLUR_SAMPLE * MAX_BLUR_SAMPLE);
 
 	// 0.0 to 1.0 factor to exclude the walkman from the blur
-	float zb = clamp(1.0 - (get_zFromDepth(texture2D(s_depth, UV0).x) * 0.001), 0.0, 1.0);
+	zb = clamp(1.0 - (get_zFromDepth(texture2D(s_depth, UV0).x) * 0.001), 0.0, 1.0);
 	zb = clamp(map(zb, 0.97, 0.97225, 0.0, 1.0), 0.0, 1.0);
+#endif
 
 	vignette = clamp(vignette + zb, 0.0, 1.0);
 
@@ -101,11 +107,10 @@ void main() {
 	overscan *= clamp(map(UV0.y, 0.9, 1.0, 1.0, 0.0), 0.0, 1.0);
 	waveUV0 = waveUV0 * vec2(0.01 * overscan * uClock.y, 0.01 * overscan * uClock.y);
 
-	// distort buffer along the bubbles
-#if 0
-	vec3 bubble_rgb = texture2D(b_tex, UV0).xyz;
-#else
+	vec2 bubbleUV0 = vec2(0.0, 0.0);
 	vec3 bubble_rgb = vec3(0.0, 0.0, 0.0);
+#if !BGFX_SHADER_LANGUAGE_GLSL
+	// distort buffer along the bubbles
 	for(j = 0; j < MAX_BLUR_SAMPLE; j++)
 	{
 			for(i = 0; i < MAX_BLUR_SAMPLE; i++)
@@ -115,9 +120,9 @@ void main() {
 			}
 	}
 	bubble_rgb /= (MAX_BLUR_SAMPLE * MAX_BLUR_SAMPLE);
+
+	bubbleUV0 = (vec2(bubble_rgb.x, bubble_rgb.y) - vec2(0.5, 0.5)) * 2.0 * 0.015 * z;
 #endif
-	vec2 bubbleUV0 = (vec2(bubble_rgb.x, bubble_rgb.y) - vec2(0.5, 0.5)) * 2.0 * 0.015 * z;
-	// vec2 bubbleUV0 = (vec2(bubble_rgb.x, bubble_rgb.y)) * 2.0 * 0.015 * z;
 
 	// poorman's color dispersion
 	float dispersion = mix(clamp(map(UV0.x, 0.0, 0.5, 0.0, 1.0), 0.0, 1.0), clamp(map(UV0.x, 0.0, 0.5, 0.5, 1.0), 0.0, 1.0), UV0.y);
@@ -152,6 +157,7 @@ void main() {
 	g *= (1.0 / (MAX_BLUR_SAMPLE * MAX_BLUR_SAMPLE));
 	b *= (1.0 / (MAX_BLUR_SAMPLE * MAX_BLUR_SAMPLE));
 
+#if !BGFX_SHADER_LANGUAGE_GLSL
 	// Bubble (fake fresnel) edges
 	float bubble_edges = pow(bubble_rgb.z, 4.0) * 0.75 * z; // * vignette;
 
@@ -166,6 +172,7 @@ void main() {
 	r += refl.x;
 	g += refl.y;
 	b += refl.z;
+ #endif
 
 	r = r * fade.x;
 	g = g * fade.x;
