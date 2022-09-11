@@ -9,6 +9,7 @@ uniform vec4 uBaseOpacityColor;
 uniform vec4 uOcclusionRoughnessMetalnessColor;
 uniform vec4 uSelfColor;
 uniform vec4 uSelfCtrl;
+uniform vec4 uSpecBooster;
 
 // Texture slots
 SAMPLER2D(uBaseOpacityMap, 0);
@@ -40,6 +41,7 @@ float SampleShadowPCF(sampler2DShadow map, vec4 coord, float inv_pixel_size, flo
 	float k = 0.0;
 
 #if FORWARD_PIPELINE_AAA
+#if !BGFX_SHADER_LANGUAGE_GLSL
 	#define PCF_SAMPLE_COUNT 2 // 3x3
 
 	ARRAY_BEGIN(float, weights, 9) 0.011147, 0.083286, 0.011147, 0.083286, 0.622269, 0.083286, 0.011147, 0.083286, 0.011147 ARRAY_END();
@@ -51,6 +53,15 @@ float SampleShadowPCF(sampler2DShadow map, vec4 coord, float inv_pixel_size, flo
 			k += SampleHardShadow(map, coord + vec4(vec2(u, v) * k_pixel_size, 0.0, 0.0), bias) * weights[j * 3 + i];
 		}
 	}
+#else
+	// 2x2
+	k += SampleHardShadow(map, coord + vec4(vec2(-0.5, -0.5) * k_pixel_size, 0.0, 0.0), bias);
+	k += SampleHardShadow(map, coord + vec4(vec2( 0.5, -0.5) * k_pixel_size, 0.0, 0.0), bias);
+	k += SampleHardShadow(map, coord + vec4(vec2(-0.5,  0.5) * k_pixel_size, 0.0, 0.0), bias);
+	k += SampleHardShadow(map, coord + vec4(vec2( 0.5,  0.5) * k_pixel_size, 0.0, 0.0), bias);
+
+	k /= 4.0;
+#endif
 #else // FORWARD_PIPELINE_AAA
 	// 2x2
 	k += SampleHardShadow(map, coord + vec4(vec2(-0.5, -0.5) * k_pixel_size, 0.0, 0.0), bias);
@@ -204,7 +215,7 @@ void main() {
 #endif // FORWARD_PIPELINE_AAA
 		}
 #endif // SLOT0_SHADOWS
-		color += GGX(V, N, NdotV, uLightDir[0].xyz, base_opacity.xyz, occ_rough_metal.g, occ_rough_metal.b, F0, uLightDiffuse[0].xyz * k_shadow, uLightSpecular[0].xyz * k_shadow);
+		color += GGX(V, N, NdotV, uLightDir[0].xyz, base_opacity.xyz, occ_rough_metal.g, occ_rough_metal.b, F0, uLightDiffuse[0].xyz * k_shadow, uLightSpecular[0].xyz * k_shadow * uSpecBooster.x);
 	}
 	// SLOT 1: point/spot light (with optional shadows)
 	{
@@ -218,7 +229,7 @@ void main() {
 		shadow_atten = SampleShadowPCF(uSpotShadowMap, vSpotShadowCoord, uShadowState.y, uShadowState.w, jitter);
 		attenuation *= shadow_atten;
 #endif // SLOT1_SHADOWS
-		color += GGX(V, N, NdotV, L, base_opacity.xyz, occ_rough_metal.g, occ_rough_metal.b, F0, uLightDiffuse[1].xyz * attenuation, uLightSpecular[1].xyz * attenuation);
+		color += GGX(V, N, NdotV, L, base_opacity.xyz, occ_rough_metal.g, occ_rough_metal.b, F0, uLightDiffuse[1].xyz * attenuation, uLightSpecular[1].xyz * attenuation * uSpecBooster.y);
 		vec3 wave_caustics = WaterCaustics(P, N, uClock.x);
 		float shadow_mix = 1.0 - clamp(pow(cone_attenuation, 0.5), 0.0, 1.0);
 		color += mix(wave_caustics * shadow_atten * 4.0, wave_caustics * 0.25, shadow_mix) * occ_rough_metal.x;
@@ -232,7 +243,7 @@ void main() {
 			L /= max(distance, 1e-8);
 			float attenuation = LightAttenuation(L, uLightDir[i].xyz, distance, uLightPos[i].w, uLightDir[i].w, uLightDiffuse[i].w);
 
-			color += GGX(V, N, NdotV, L, base_opacity.xyz, occ_rough_metal.g, occ_rough_metal.b, F0, uLightDiffuse[i].xyz * attenuation, uLightSpecular[i].xyz * attenuation);
+			color += GGX(V, N, NdotV, L, base_opacity.xyz, occ_rough_metal.g, occ_rough_metal.b, F0, uLightDiffuse[i].xyz * attenuation, uLightSpecular[i].xyz * attenuation * uSpecBooster.z);
 		}
 	}
 

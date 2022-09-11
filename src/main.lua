@@ -54,7 +54,7 @@ function main(cmd_arg)
 	local no_aa
 
 	hg.ShowCursor()
-	config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa = config_gui()
+	config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa = config_gui(config.is_opengl)
 
 	-- set config
 	res_x, res_y = default_res_x, default_res_y
@@ -206,7 +206,12 @@ function main(cmd_arg)
 
 		-- bubbles init
 		local bubble_particles = {emitter={spawn_timeout=hg.time_from_sec_f(0.0)}, particles={}}
-		local blank_bubble = hg.CreateInstanceFromAssets(bubble_scene, hg.TranslationMat4(hg.Vec3(0,0,0)), "bubble.scn", res, hg.GetForwardPipelineInfo()) -- , hg.LSSF_Nodes | hg.LSSF_Scene | hg.LSSF_DoNotChangeCurrentCameraIfValid)
+		local blank_bubble
+		if config.is_opengl == false then
+			blank_bubble = hg.CreateInstanceFromAssets(bubble_scene, hg.TranslationMat4(hg.Vec3(0,0,0)), "bubble.scn", res, hg.GetForwardPipelineInfo()) -- , hg.LSSF_Nodes | hg.LSSF_Scene | hg.LSSF_DoNotChangeCurrentCameraIfValid)
+		else
+			blank_bubble = hg.CreateInstanceFromAssets(bubble_scene, hg.TranslationMat4(hg.Vec3(0,0,0)), "bubble_reflection.scn", res, hg.GetForwardPipelineInfo()) -- , hg.LSSF_Nodes | hg.LSSF_Scene | hg.LSSF_DoNotChangeCurrentCameraIfValid)
+		end
 		blank_bubble:Disable()
 
 		-- fish boids init
