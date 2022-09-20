@@ -1,5 +1,6 @@
 
-function config_gui()
+function config_gui(is_opengl)
+    is_opengl = is_opengl or false
     -- resolution selection
     local res_list = {{640, 360}, {768, 432}, {896, 504}, {1024, 576}, {1152, 648}, {1280, 720}, {1920, 1080}, {1920, 1200}, {2560, 1440}, {3840, 2160}, {5120, 2880}}
     local res_list_str = {}
@@ -26,7 +27,11 @@ function config_gui()
     local config_done = 0 -- 0 = stay, 1 = play demo, 2 = exit without playing the demo
 
     local win = hg.NewWindow("Marine Melodies - Config", res_x, res_y, 32)
-    hg.RenderInit(win) -- , hg.RT_OpenGL)
+    if is_opengl == false then
+        hg.RenderInit(win)
+    else
+        hg.RenderInit(win, hg.RT_OpenGL)
+    end
 
     local imgui_prg = hg.LoadProgramFromAssets('core/shader/imgui')
     local imgui_img_prg = hg.LoadProgramFromAssets('core/shader/imgui_image')

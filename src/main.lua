@@ -24,8 +24,12 @@ function draw_line(pos_a, pos_b, line_color, vid, vtx_line_layout, line_shader)
 end
 
 function main(cmd_arg)
-	local config = {enable_aaa=true, low_aaa=false, skip_intro=false}
+	local config = {enable_aaa=true, low_aaa=false, skip_intro=true, is_opengl=true}
 	local i
+
+	if package.config:sub(1,1) == '/' then
+		is_opengl=true
+	end
 
 	-- hg.SetLogLevel(hg.LL_Normal)
 
@@ -50,7 +54,7 @@ function main(cmd_arg)
 	local no_aa
 
 	hg.ShowCursor()
-	config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa = config_gui()
+	config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa = config_gui(config.is_opengl)
 
 	-- set config
 	res_x, res_y = default_res_x, default_res_y
@@ -74,7 +78,11 @@ function main(cmd_arg)
 
 		-- local win = hg.RenderInit('Minisub Escape', res_x, res_y, hg.RF_VSync | hg.RF_MSAA4X)
 		win = hg.NewWindow("Marine Melodies^Resistance(2022)", res_x, res_y, 32, default_fullscreen) --, hg.WV_Fullscreen)
-		hg.RenderInit(win) --, hg.RT_OpenGL)
+		if config.is_opengl == false then
+			hg.RenderInit(win)
+		else
+			hg.RenderInit(win, hg.RT_OpenGL)
+		end
 		hg.RenderReset(res_x, res_y, hg.RF_MSAA4X | hg.RF_MaxAnisotropy)
 
 		-- create pipeline
@@ -104,16 +112,23 @@ function main(cmd_arg)
 		local scene_clocks = hg.SceneClocks()
 
 		-- specific scene to render the bubbles
-		local bubble_scene = hg.Scene()
+		local bubble_scene
+		if config.is_opengl == false then
+			bubble_scene = hg.Scene()
+		else
+			bubble_scene = scene
+		end
 
 		-- create a frame buffer to draw the scene to
 		local color = hg.CreateTexture(res_x, res_y, "color texture", hg.TF_RenderTarget, hg.TF_RGBA8)
-		local depth =  hg.CreateTexture(res_x, res_y, "depth texture", hg.TF_RenderTarget, hg.TF_D32F)
+		local depth =  hg.CreateTexture(res_x, res_y, "depth texture", hg.TF_RenderTarget, hg.TF_D24F)
 		local frame_buffer = hg.CreateFrameBuffer(color, depth, "framebuffer")
 
-		local bubble_color = hg.CreateTexture(res_x, res_y, "color texture", hg.TF_RenderTarget, hg.TF_RGBA8)
-		local bubble_depth =  hg.CreateTexture(res_x, res_y, "depth texture", hg.TF_RenderTarget, hg.TF_D32F)
-		local bubble_frame_buffer = hg.CreateFrameBuffer(bubble_color, bubble_depth, "bubble_framebuffer")
+		if config.is_opengl == false then
+			local bubble_color = hg.CreateTexture(res_x, res_y, "color texture", hg.TF_RenderTarget, hg.TF_RGBA8)
+			local bubble_depth =  hg.CreateTexture(res_x, res_y, "depth texture", hg.TF_RenderTarget, hg.TF_D24F)
+			local bubble_frame_buffer = hg.CreateFrameBuffer(bubble_color, bubble_depth, "bubble_framebuffer")
+		end
 
 		-- create a plane model for the final rendering stage
 		local vtx_layout = hg.VertexLayoutPosFloatNormUInt8TexCoord0UInt8()
@@ -160,8 +175,10 @@ function main(cmd_arg)
 		local z_far = cam:GetCamera():GetZFar()
 		local fov = cam:GetCamera():GetFov()
 
-		local bubble_cam = hg.CreateCamera(bubble_scene, cam:GetTransform():GetWorld(), z_near, z_far, fov)
-		bubble_scene:SetCurrentCamera(bubble_cam)
+		if config.is_opengl == false then
+			local bubble_cam = hg.CreateCamera(bubble_scene, cam:GetTransform():GetWorld(), z_near, z_far, fov)
+			bubble_scene:SetCurrentCamera(bubble_cam)
+		end
 
 		-- intro particles init
 		local intro_particles = {}
@@ -189,7 +206,12 @@ function main(cmd_arg)
 
 		-- bubbles init
 		local bubble_particles = {emitter={spawn_timeout=hg.time_from_sec_f(0.0)}, particles={}}
-		local blank_bubble = hg.CreateInstanceFromAssets(bubble_scene, hg.TranslationMat4(hg.Vec3(0,0,0)), "bubble.scn", res, hg.GetForwardPipelineInfo()) -- , hg.LSSF_Nodes | hg.LSSF_Scene | hg.LSSF_DoNotChangeCurrentCameraIfValid)
+		local blank_bubble
+		if config.is_opengl == false then
+			blank_bubble = hg.CreateInstanceFromAssets(bubble_scene, hg.TranslationMat4(hg.Vec3(0,0,0)), "bubble.scn", res, hg.GetForwardPipelineInfo()) -- , hg.LSSF_Nodes | hg.LSSF_Scene | hg.LSSF_DoNotChangeCurrentCameraIfValid)
+		else
+			blank_bubble = hg.CreateInstanceFromAssets(bubble_scene, hg.TranslationMat4(hg.Vec3(0,0,0)), "bubble_reflection.scn", res, hg.GetForwardPipelineInfo()) -- , hg.LSSF_Nodes | hg.LSSF_Scene | hg.LSSF_DoNotChangeCurrentCameraIfValid)
+		end
 		blank_bubble:Disable()
 
 		-- fish boids init
@@ -490,7 +512,9 @@ function main(cmd_arg)
 			hg.SceneUpdateSystems(scene, scene_clocks, dt, physics, hg.time_from_sec_f(1 / 60), 4)
 			-- physics:SyncTransformsToScene(scene)
 			-- scene:Update(dt)
-			bubble_scene:Update(dt)
+			if config.is_opengl == false then
+				bubble_scene:Update(dt)
+			end
 
 			-- main framebuffer
 			local view_id = 0
@@ -500,7 +524,7 @@ function main(cmd_arg)
 			else
 				view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res, frame_buffer.handle)
 			end
-
+			
 			-- view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res)
 
 			-- debug draw lines
@@ -523,7 +547,9 @@ function main(cmd_arg)
 			fish_boids = boids_update_draw(opaque_view_id, vtx_line_layout, dt, fish_boids, boids_min_max, scene, physics, shader_for_line, scene:GetNode("sphere"))
 
 			-- bubble framebuffer
-			view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, bubble_scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res, bubble_frame_buffer.handle)
+			if config.is_opengl == false then
+				view_id, pass_ids = hg.SubmitSceneToPipeline(view_id, bubble_scene, hg.IntRect(0, 0, res_x, res_y), true, pipeline, res, bubble_frame_buffer.handle)
+			end
 
 			-- draw the render texture on a quad
 			hg.SetViewPerspective(view_id, 0, 0, res_x, res_y, hg.TranslationMat4(hg.Vec3(0, 0, -0.5)))
@@ -538,8 +564,13 @@ function main(cmd_arg)
 							hg.MakeUniformSetValue('uClock', hg.Vec4(hg.time_to_sec_f(clock), 0.1, 0.0, 0.0)),
 							hg.MakeUniformSetValue('uZFrustum', hg.Vec4(z_near, z_far, fov, 0))
 						}
-			tex_uniforms = {hg.MakeUniformSetTexture('s_tex', color, 0), hg.MakeUniformSetTexture('s_depth', depth, 1), 
+			if config.is_opengl == false then
+				tex_uniforms = {hg.MakeUniformSetTexture('s_tex', color, 0), hg.MakeUniformSetTexture('s_depth', depth, 1), 
 							hg.MakeUniformSetTexture('b_tex', bubble_color, 2), hg.MakeUniformSetTexture('b_depth', bubble_depth, 3)}
+			else
+				tex_uniforms = {hg.MakeUniformSetTexture('s_tex', color, 0)}
+			end
+
 
 			hg.DrawModel(view_id, screen_mdl, screen_prg, val_uniforms, tex_uniforms, 
 						hg.TransformationMat4(hg.Vec3(0, 0, 0), hg.Vec3(math.pi / 2, math.pi, 0)))
