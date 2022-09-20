@@ -81,6 +81,10 @@ void main() {
 	// 0.0 to 1.0 factor to exclude the walkman from the blur
 	zb = clamp(1.0 - (get_zFromDepth(texture2D(s_depth, UV0).x) * 0.001), 0.0, 1.0);
 	zb = clamp(map(zb, 0.97, 0.97225, 0.0, 1.0), 0.0, 1.0);
+#else
+	vec2 UV0r = vec2(clamp(UV0.x + 0.09 - UV0.y * 0.1, 0.0, 1.0), UV0.y + UV0.x * 0.4);
+	zb = pow(clamp(UV0r.x * 8.0, 0.0, 1.0), 4.0) * pow(clamp((0.4 - UV0r.x) * 8.0, 0.0, 1.0), 0.75);
+	zb *= pow(min(UV0r.y * 6.0, 1.0), 2.0) * pow(clamp((0.4 - UV0r.y) * 12.0, 0.0, 1.0), 0.75);
 #endif
 
 	vignette = clamp(vignette + zb, 0.0, 1.0);
@@ -194,6 +198,7 @@ void main() {
 	// gl_FragColor = texture2D(b_tex, UV0);
 	// gl_FragColor = vec4(z, z, z, 1.0);
 	// gl_FragColor = vec4(zb, zb, zb, 1.0);
+	// gl_FragColor = vec4(r, g, b, 1.0) + vec4(zb, zb, zb, 0.0);
 	// gl_FragColor = vec4(bubble_rgb.x, bubble_rgb.y, bubble_rgb.z, 1.0);
 	// gl_FragColor = vec4(bubbleUV0 * 200.0, 0.0, 1.0);
 }
