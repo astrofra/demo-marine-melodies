@@ -1,9 +1,30 @@
 
+local function get_res_list(widescreen)
+    if widescreen == true then
+        return {{640, 360}, {768, 432}, {896, 504}, {1024, 576}, {1152, 648}, {1280, 720}, {1920, 1080}, {1920, 1200}, {2560, 1440}, {3840, 2160}, {5120, 2880}}
+    else
+        return {{200, 150}, {320, 200}, {400, 300}, {640, 480}, {768, 576}, {800, 600}, {1024, 768}, {1280, 960}}
+    end
+end
+
+local function prepare_resolution(widescreen)
+    -- prepare list of resolutions
+    local i
+    local res_list_str = {}
+    for i = 1, #get_res_list(widescreen) do
+        table.insert(res_list_str, get_res_list(widescreen)[i][1] .. "x" .. get_res_list(widescreen)[i][2])
+    end
+
+    return res_list_str
+end    
+
 function config_gui()
     -- resolution selection
-    local res_list = {{640, 360}, {768, 432}, {896, 504}, {1024, 576}, {1152, 648}, {1280, 720}, {1920, 1080}, {1920, 1200}, {2560, 1440}, {3840, 2160}, {5120, 2880}}
-    local res_list_str = {}
-    local res_x, res_y = 600, 200
+    -- local res_list = {{640, 360}, {768, 432}, {896, 504}, {1024, 576}, {1152, 648}, {1280, 720}, {1920, 1080}, {1920, 1200}, {2560, 1440}, {3840, 2160}, {5120, 2880}}
+    local widescreen = true
+    local crt = false
+    local res_list_str
+    local res_x, res_y = 600, 240
     local default_res_x = 1280
     local default_res_y = 720
     local mode_list = {hg.WV_Windowed, hg.WV_Fullscreen, hg.WV_Undecorated, hg.WV_FullscreenMonitor1, hg.WV_FullscreenMonitor2, hg.WV_FullscreenMonitor3}
@@ -33,11 +54,7 @@ function config_gui()
 
     hg.ImGuiInit(10, imgui_prg, imgui_img_prg)
 
-    -- prepare list of resolutions
-    local i
-    for i = 1, #res_list do
-        table.insert(res_list_str, res_list[i][1] .. "x" .. res_list[i][2])
-    end
+    res_list_str = prepare_resolution(widescreen)
 
     -- main loop
     while not hg.ReadKeyboard():Key(hg.K_Escape) and hg.IsWindowOpen(win) and config_done == 0 do
@@ -52,11 +69,11 @@ function config_gui()
 
             res_modified, res_preset = hg.ImGuiCombo("Resolution", res_preset, res_list_str)
 
-            -- apply preset if a combo entry was selected
-            if res_modified then
-                default_res_x = res_list[res_preset + 1][1]
-                default_res_y = res_list[res_preset + 1][2]
-            end
+            -- -- apply preset if a combo entry was selected
+            -- if res_modified then
+            --     default_res_x = get_res_list(widescreen)[res_preset + 1][1]
+            --     default_res_y = get_res_list(widescreen)[res_preset + 1][2]
+            -- end
 
             -- fullscreen_modified, default_fullscreen = hg.ImGuiCheckBox("Fullscreen", default_fullscreen)
             fullscreen_modified, fullscreen_preset = hg.ImGuiCombo("Mode", fullscreen_preset, mode_list_str)
@@ -64,6 +81,34 @@ function config_gui()
             -- apply preset if a combo entry was selected
             if fullscreen_modified then
                 default_fullscreen = mode_list[fullscreen_preset + 1]
+            end
+
+            -- Ratio settings
+            hg.ImGuiSpacing()
+            hg.ImGuiSeparator()
+            hg.ImGuiSpacing()
+            hg.ImGuiText("Aspect Ratio")
+
+            pressed_ratio_widescreen = hg.ImGuiRadioButton("16:9", widescreen)
+            hg.ImGuiSameLine()
+            pressed_ratio_crt = hg.ImGuiRadioButton("4:3", crt)
+            hg.ImGuiSameLine()
+
+            if (pressed_ratio_widescreen) then
+                widescreen = true
+                crt = false
+                res_list_str = prepare_resolution(widescreen)
+            elseif (pressed_ratio_crt) then
+                widescreen = false
+                crt = true
+                res_list_str = prepare_resolution(widescreen)
+            end
+
+            -- apply preset if a combo entry was selected
+            if res_modified or pressed_ratio_widescreen or pressed_ratio_crt then
+                default_res_x = get_res_list(widescreen)[res_preset + 1][1]
+                default_res_y = get_res_list(widescreen)[res_preset + 1][2]
+                print("resolution : " .. default_res_x .. "," .. default_res_y)
             end
 
             -- Rendering settings
@@ -129,5 +174,5 @@ function config_gui()
     hg.RenderShutdown()
 	hg.DestroyWindow(win)
 
-    return config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa
+    return config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa, widescreen
 end

@@ -24,7 +24,7 @@ function draw_line(pos_a, pos_b, line_color, vid, vtx_line_layout, line_shader)
 end
 
 function main(cmd_arg)
-	local config = {enable_aaa=true, low_aaa=false, skip_intro=false}
+	local config = {enable_aaa=true, low_aaa=false, skip_intro=true}
 	local i
 
 	-- hg.SetLogLevel(hg.LL_Normal)
@@ -48,12 +48,15 @@ function main(cmd_arg)
 	local full_aaa
 	local low_aaa
 	local no_aa
+	local widescreen
 
 	hg.ShowCursor()
-	config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa = config_gui()
+	config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa, widescreen = config_gui()
 
 	-- set config
 	res_x, res_y = default_res_x, default_res_y
+
+	print("resolution selected : " .. res_x .. "," .. res_y)
 
 	if no_aaa then
 		config.enable_aaa = false 
@@ -73,7 +76,7 @@ function main(cmd_arg)
 		local font_size = math.floor((40 * res_x) / 1280)
 
 		-- local win = hg.RenderInit('Minisub Escape', res_x, res_y, hg.RF_VSync | hg.RF_MSAA4X)
-		win = hg.NewWindow("Marine Melodies^Resistance(2022)", res_x, res_y, 32, default_fullscreen) --, hg.WV_Fullscreen)
+		win = hg.NewWindow("Marine Melodies^Resistance(2023 XUL Edition)", res_x, res_y, 32, default_fullscreen) --, hg.WV_Fullscreen)
 		hg.RenderInit(win) --, hg.RT_OpenGL)
 		hg.RenderReset(res_x, res_y, hg.RF_MSAA4X | hg.RF_MaxAnisotropy)
 
@@ -91,7 +94,11 @@ function main(cmd_arg)
 		-- DEMO
 		-- load the scene to draw to a texture
 		local scene = hg.Scene()
-		hg.LoadSceneFromAssets("main_scenery.scn", scene, res, hg.GetForwardPipelineInfo())
+		if (widescreen) then
+			hg.LoadSceneFromAssets("main_scenery.scn", scene, res, hg.GetForwardPipelineInfo())
+		else
+			hg.LoadSceneFromAssets("main_scenery_4-3.scn", scene, res, hg.GetForwardPipelineInfo())
+		end
 		local intro_anims = {"begin", "fadein", "fadeout", "title_fadein", "title_fadeout", "end"}
 		local intro_current_anim = 0
 		local intro_playing_anim = 0
@@ -159,6 +166,7 @@ function main(cmd_arg)
 		local z_near = cam:GetCamera():GetZNear()
 		local z_far = cam:GetCamera():GetZFar()
 		local fov = cam:GetCamera():GetFov()
+		print("fov = " .. hg.RadianToDegree(fov))
 
 		local bubble_cam = hg.CreateCamera(bubble_scene, cam:GetTransform():GetWorld(), z_near, z_far, fov)
 		bubble_scene:SetCurrentCamera(bubble_cam)
@@ -541,8 +549,12 @@ function main(cmd_arg)
 			tex_uniforms = {hg.MakeUniformSetTexture('s_tex', color, 0), hg.MakeUniformSetTexture('s_depth', depth, 1), 
 							hg.MakeUniformSetTexture('b_tex', bubble_color, 2), hg.MakeUniformSetTexture('b_depth', bubble_depth, 3)}
 
+			local _screen_pos = hg.Vec3(0, 0, 0)
+			if widescreen == false then
+				_screen_pos.z = 0.1725
+			end
 			hg.DrawModel(view_id, screen_mdl, screen_prg, val_uniforms, tex_uniforms, 
-						hg.TransformationMat4(hg.Vec3(0, 0, 0), hg.Vec3(math.pi / 2, math.pi, 0)))
+						hg.TransformationMat4(_screen_pos, hg.Vec3(math.pi / 2, math.pi, 0)))
 
 			view_id = view_id + 1
 			hg.SetView2D(view_id, 0, 0, res_x, res_y, -1, 1, hg.CF_None, hg.Color.Black, 1, 0)

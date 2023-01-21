@@ -2,8 +2,8 @@
 	"editor": {
 		"animeditor_plugin": {
 			"quantize_time": true,
-			"show_trajectories": "all",
-			"trajectories_tick_seconds": 0.10000000149011612,
+			"show_trajectories": null,
+			"trajectories_tick_seconds": 1.0,
 			"trajectories_tick_size": 0.10000000149011612
 		},
 		"explorer": {
@@ -32,6 +32,12 @@
 							27
 						],
 						"ref": 19
+					},
+					{
+						"children": [
+							28
+						],
+						"ref": 27
 					},
 					{
 						"children": [
@@ -124,7 +130,7 @@
 			"subdiv_size": 1.0
 		},
 		"navigation_plugin": {
-			"orbit_distance": 56.41474151611328,
+			"orbit_distance": 8.467547416687012,
 			"speed": 0.10000000149011612,
 			"turbo": 1.0
 		},
@@ -137,7 +143,7 @@
 			"snap_scale_fine": 1.0,
 			"snap_translation": 1.0,
 			"snap_translation_fine": 0.10000000149011612,
-			"tool": "scale"
+			"tool": "move"
 		},
 		"view_plugin": {
 			"show_cameras": true,
@@ -217,15 +223,15 @@
 				0.95864337682724,
 				0.10436486452817917,
 				0.2651474177837372,
-				-8.935243606567383,
+				-3.2451493740081787,
 				0.0,
 				0.9306472539901733,
 				-0.36633265018463135,
-				23.39191436767578,
+				11.501936912536621,
 				-0.2848934531211853,
 				0.3511943817138672,
 				0.8922197222709656,
-				-48.73031997680664
+				-54.23975372314453
 			],
 			"perspective_fov": 0.4173927307128906,
 			"perspective_zrange": {
