@@ -1,1 +1,3 @@
 harfang=3.2.3
+asyncio
+pyserial-asyncio
