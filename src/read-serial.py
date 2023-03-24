@@ -1,25 +1,31 @@
-import serial
-import time # Optional (required if using time.sleep() below)
+import asyncio
+import aioserial
 
-ser = serial.Serial(port='COM3', baudrate=9600)
+async def read_serial(ser):
+    while True:
+        # Check if incoming bytes are waiting to be read from the serial input
+        # buffer.
+        if ser.in_waiting > 0:
+            # Read the bytes and convert from binary array to ASCII
+            data = await ser.read_async(ser.in_waiting)
+            data_str = data.decode('ascii')
+            # Print the incoming string without putting a new-line
+            # ('\n') automatically after every print()
+            print(data_str, end='')
 
-while (True):
-    # Check if incoming bytes are waiting to be read from the serial input 
-    # buffer.
-    # NB: for PySerial v3.0 or later, use property `in_waiting` instead of
-    # function `inWaiting()` below!
-    if (ser.inWaiting() > 0):
-        # read the bytes and convert from binary array to ASCII
-        data_str = ser.read(ser.inWaiting()).decode('ascii') 
-        # print the incoming string without putting a new-line
-        # ('\n') automatically after every print()
-        print(data_str, end='') 
+        # Put the rest of your code you want here
 
-    # Put the rest of your code you want here
-    
-    # Optional, but recommended: sleep 10 ms (0.01 sec) once per loop to let 
-    # other threads on your PC run during this time. 
-    time.sleep(0.01)
+        # Sleep 10 ms (0.01 sec) once per loop to let
+        # other tasks run during this time.
+        await asyncio.sleep(0.01)
+
+async def main():
+    ser = aioserial.AioSerial(port='COM3', baudrate=9600)
+    await read_serial(ser)
+
+if __name__ == '__main__':
+    asyncio.run(main())
+
 
 # import asyncio
 # import serial_asyncio
