@@ -79,6 +79,7 @@ function main(cmd_arg)
 		win = hg.NewWindow("Marine Melodies^Resistance(2023 XUL Edition)", res_x, res_y, 32, default_fullscreen) --, hg.WV_Fullscreen)
 		hg.RenderInit(win) --, hg.RT_OpenGL)
 		hg.RenderReset(res_x, res_y, hg.RF_MSAA4X | hg.RF_MaxAnisotropy)
+		hg.SetWindowPos(win, hg.iVec2(-720,0))
 
 		-- create pipeline
 		local pipeline = hg.CreateForwardPipeline()
@@ -560,7 +561,7 @@ function main(cmd_arg)
 			hg.SetView2D(view_id, 0, 0, res_x, res_y, -1, 1, hg.CF_None, hg.Color.Black, 1, 0)
 
 			if widescreen == false then
-				view_id, scroll_x, char_offset, ns = update_demo_scroll_text(dt, view_id, res_x, res_y, scroll_x, char_offset, ns, scroll_text, font, font_program, font_size, text_render_state, EaseInOutQuick(fade), -32.0)
+				view_id, scroll_x, char_offset, ns = update_demo_scroll_text(dt, view_id, res_x, res_y, scroll_x, char_offset, ns, scroll_text, font, font_program, font_size, text_render_state, EaseInOutQuick(fade), -40.0)
 			else
 				view_id, scroll_x, char_offset, ns = update_demo_scroll_text(dt, view_id, res_x, res_y, scroll_x, char_offset, ns, scroll_text, font, font_program, font_size, text_render_state, EaseInOutQuick(fade))
 			end

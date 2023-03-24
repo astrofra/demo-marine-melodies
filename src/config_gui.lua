@@ -2,8 +2,10 @@
 local function get_res_list(widescreen)
     if widescreen == true then
         return {{640, 360}, {768, 432}, {896, 504}, {1024, 576}, {1152, 648}, {1280, 720}, {1920, 1080}, {1920, 1200}, {2560, 1440}, {3840, 2160}, {5120, 2880}}
+        -- return {{1280, 720}}
     else
-        return {{200, 150}, {320, 200}, {400, 300}, {640, 480}, {768, 576}, {800, 600}, {1024, 768}, {1280, 960}}
+        return {{200, 150}, {320, 200}, {400, 300}, {640, 480}, {720, 576}, {768, 576}, {800, 600}, {1024, 768}, {1280, 960}}
+        -- return {{720, 576}}
     end
 end
 
@@ -21,17 +23,17 @@ end
 function config_gui()
     -- resolution selection
     -- local res_list = {{640, 360}, {768, 432}, {896, 504}, {1024, 576}, {1152, 648}, {1280, 720}, {1920, 1080}, {1920, 1200}, {2560, 1440}, {3840, 2160}, {5120, 2880}}
-    local widescreen = true
-    local crt = false
+    local widescreen = false
+    local crt = true
     local res_list_str
     local res_x, res_y = 600, 240
-    local default_res_x = 1280
-    local default_res_y = 720
+    local default_res_x = 720
+    local default_res_y = 576
     local mode_list = {hg.WV_Windowed, hg.WV_Fullscreen, hg.WV_Undecorated, hg.WV_FullscreenMonitor1, hg.WV_FullscreenMonitor2, hg.WV_FullscreenMonitor3}
     local mode_list_str = {"Windowed", "Fullscreen", "Undecorated", "Fullscreen Monitor #1", "Fullscreen Monitor #2", "Fullscreen Monitor #3"}
 
     local res_modified
-    local res_preset = 5
+    local res_preset = 4
     local fullscreen_modified
     local fullscreen_preset = 2
     local default_fullscreen = hg.WV_Undecorated
@@ -45,6 +47,8 @@ function config_gui()
     local no_aaa = false
 
     local config_done = 0 -- 0 = stay, 1 = play demo, 2 = exit without playing the demo
+
+    local first_run = true
 
     local win = hg.NewWindow("Marine Melodies - Config", res_x, res_y, 32)
     hg.RenderInit(win) -- , hg.RT_OpenGL)

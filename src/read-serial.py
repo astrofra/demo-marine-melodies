@@ -8,8 +8,8 @@ async def read_serial_data(serial_port):
 
 async def main():
     # Replace 'COM3' with the serial port name on your system
-    port = 'COM3'
-    baudrate = 115200
+    port = 'COM1'
+    baudrate = 9600 # 115200
 
     # Create a connection to the serial port
     serial_port = await serial_asyncio.open_serial_connection(url=port, baudrate=baudrate)
