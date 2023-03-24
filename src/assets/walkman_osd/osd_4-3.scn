@@ -1,0 +1,1173 @@
+{
+	"canvas": {
+		"clear_color": true,
+		"clear_z": true,
+		"color": [
+			55,
+			55,
+			55,
+			255
+		]
+	},
+	"environment": {
+		"ambient": [
+			0,
+			0,
+			0,
+			0
+		],
+		"brdf_map": "core/pbr/brdf.dds",
+		"current_camera": null,
+		"fog_color": [
+			0,
+			0,
+			0,
+			0
+		],
+		"fog_far": 0.0,
+		"fog_near": 0.0,
+		"probe": {
+			"irradiance_map": "core/pbr/probe.hdr.irradiance",
+			"parallax": 0.0,
+			"pos": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"radiance_map": "core/pbr/probe.hdr.radiance",
+			"rot": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.0,
+				1.0,
+				1.0
+			],
+			"type": "sphere"
+		}
+	},
+	"instances": [
+		{
+			"name": "walkman_osd/double_dot.scn"
+		}
+	],
+	"key_values": null,
+	"nodes": [
+		{
+			"components": [
+				0,
+				4294967295,
+				0,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 0,
+			"name": "digit_0"
+		},
+		{
+			"components": [
+				1,
+				4294967295,
+				1,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 1,
+			"name": "digit_1"
+		},
+		{
+			"components": [
+				2,
+				4294967295,
+				2,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 2,
+			"name": "digit_2"
+		},
+		{
+			"components": [
+				3,
+				4294967295,
+				3,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 3,
+			"name": "digit_3"
+		},
+		{
+			"components": [
+				4,
+				4294967295,
+				4294967295,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 4,
+			"name": "time_display_root"
+		},
+		{
+			"components": [
+				5,
+				4294967295,
+				4,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 5,
+			"name": "songs_titles"
+		},
+		{
+			"components": [
+				6,
+				4294967295,
+				5,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 6,
+			"name": "icon_mode_repeat"
+		},
+		{
+			"components": [
+				7,
+				4294967295,
+				6,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 7,
+			"name": "icon_mode_next"
+		},
+		{
+			"components": [
+				8,
+				4294967295,
+				4294967295,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 8,
+			"instance": 0,
+			"name": "double_dot"
+		},
+		{
+			"components": [
+				9,
+				4294967295,
+				7,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 9,
+			"name": "dot_0"
+		},
+		{
+			"components": [
+				10,
+				4294967295,
+				8,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 10,
+			"name": "dot_1"
+		},
+		{
+			"components": [
+				11,
+				4294967295,
+				9,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 11,
+			"name": "dot_2"
+		},
+		{
+			"components": [
+				12,
+				4294967295,
+				10,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 12,
+			"name": "dot_3"
+		},
+		{
+			"components": [
+				13,
+				4294967295,
+				11,
+				4294967295,
+				4294967295
+			],
+			"disabled": false,
+			"idx": 13,
+			"name": "dot_4"
+		}
+	],
+	"objects": [
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "shaders/zoetrope_linear.hps",
+					"textures": [
+						{
+							"name": "uDiffuseMap",
+							"path": "walkman_osd/digits_ticketing.png",
+							"stage": 0
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0784313753247261,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uParam",
+							"type": "vec4",
+							"value": [
+								0.0,
+								10.0,
+								0.0,
+								0.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "shaders/zoetrope_linear.hps",
+					"textures": [
+						{
+							"name": "uDiffuseMap",
+							"path": "walkman_osd/digits_ticketing.png",
+							"stage": 0
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0784313753247261,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uParam",
+							"type": "vec4",
+							"value": [
+								1.0,
+								10.0,
+								0.0,
+								0.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "shaders/zoetrope_linear.hps",
+					"textures": [
+						{
+							"name": "uDiffuseMap",
+							"path": "walkman_osd/digits_ticketing.png",
+							"stage": 0
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0784313753247261,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uParam",
+							"type": "vec4",
+							"value": [
+								2.0,
+								10.0,
+								0.0,
+								0.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "shaders/zoetrope_linear.hps",
+					"textures": [
+						{
+							"name": "uDiffuseMap",
+							"path": "walkman_osd/digits_ticketing.png",
+							"stage": 0
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0784313753247261,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uParam",
+							"type": "vec4",
+							"value": [
+								3.0,
+								10.0,
+								0.0,
+								0.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "shaders/zoetrope_linear.hps",
+					"textures": [
+						{
+							"name": "uDiffuseMap",
+							"path": "walkman_osd/songs_titles.png",
+							"stage": 0
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0784313753247261,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uParam",
+							"type": "vec4",
+							"value": [
+								0.0,
+								8.0,
+								0.0,
+								0.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "shaders/zoetrope_linear.hps",
+					"textures": [
+						{
+							"name": "uDiffuseMap",
+							"path": "walkman_osd/icon_mode_repeat.png",
+							"stage": 0
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0784313753247261,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uParam",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.9900000095367432,
+								0.0,
+								0.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "shaders/zoetrope_linear.hps",
+					"textures": [
+						{
+							"name": "uDiffuseMap",
+							"path": "walkman_osd/icon_mode_next.png",
+							"stage": 0
+						}
+					],
+					"values": [
+						{
+							"name": "uDiffuseColor",
+							"type": "vec4",
+							"value": [
+								0.0784313753247261,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uParam",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.9900000095367432,
+								0.0,
+								0.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.5,
+								0.10000000149011612,
+								1.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.07843136787414551,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								1.0,
+								1.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.5,
+								0.10000000149011612,
+								1.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0784313753247261,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								1.0,
+								1.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.5,
+								0.10000000149011612,
+								1.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0784313753247261,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								1.0,
+								1.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.5,
+								0.10000000149011612,
+								1.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0784313753247261,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								1.0,
+								1.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		},
+		{
+			"bones": [],
+			"material_infos": [
+				{
+					"name": ""
+				}
+			],
+			"materials": [
+				{
+					"blend_mode": "add",
+					"depth_test": "less",
+					"face_culling": "cw",
+					"flags": [],
+					"program": "core/shader/pbr.hps",
+					"values": [
+						{
+							"name": "uBaseOpacityColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uOcclusionRoughnessMetalnessColor",
+							"type": "vec4",
+							"value": [
+								0.0,
+								0.5,
+								0.10000000149011612,
+								1.0
+							]
+						},
+						{
+							"name": "uSelfColor",
+							"type": "vec4",
+							"value": [
+								0.0784313753247261,
+								1.0,
+								0.0,
+								1.0
+							]
+						},
+						{
+							"name": "uSelfCtrl",
+							"type": "vec4",
+							"value": [
+								1.0,
+								1.0,
+								1.0,
+								1.0
+							]
+						}
+					],
+					"write_a": true,
+					"write_b": true,
+					"write_g": true,
+					"write_r": true,
+					"write_z": false
+				}
+			],
+			"name": "walkman_osd/digit.geo"
+		}
+	],
+	"transforms": [
+		{
+			"parent": 4,
+			"pos": [
+				3.315256357192993,
+				-1.4899327754974365,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.6337770819664001,
+				0.6337770819664001,
+				1.0
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				6.897737503051758,
+				-1.489932656288147,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.6337770819664001,
+				0.6337770819664001,
+				1.0
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				13.38160514831543,
+				-1.4899327754974365,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.6337770819664001,
+				0.6337770819664001,
+				1.0
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				16.734708786010742,
+				-1.4899327754974365,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.6337770819664001,
+				0.6337770819664001,
+				1.0
+			]
+		},
+		{
+			"parent": null,
+			"pos": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"rot": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				1.0,
+				1.0,
+				1.0
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				18.158946990966797,
+				4.147144317626953,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				-90.0
+			],
+			"scl": [
+				0.8589229583740234,
+				8.589229583740234,
+				0.10000000149011612
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				-3.46063232421875,
+				-1.6746912002563477,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.8208474516868591,
+				0.8208474516868591,
+				1.100000023841858
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				-3.46063232421875,
+				-1.6746912002563477,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.8208474516868591,
+				0.8208474516868591,
+				1.100000023841858
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				4.4033308029174805,
+				-1.4899327754974365,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.6337770819664001,
+				0.6337770819664001,
+				1.0
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				23.249900817871094,
+				-2.838973045349121,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.4000000059604645,
+				0.14068536460399628,
+				0.10000000149011612
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				27.950000762939453,
+				-2.838973045349121,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.4000000059604645,
+				0.14068536460399628,
+				0.10000000149011612
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				32.70000076293945,
+				-2.838973045349121,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.4000000059604645,
+				0.14068536460399628,
+				0.10000000149011612
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				37.400421142578125,
+				-2.838973045349121,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.4000000059604645,
+				0.14068536460399628,
+				0.10000000149011612
+			]
+		},
+		{
+			"parent": 4,
+			"pos": [
+				42.064998626708984,
+				-2.838973045349121,
+				0.0
+			],
+			"rot": [
+				-0.0,
+				0.0,
+				0.0
+			],
+			"scl": [
+				0.4000000059604645,
+				0.14068536460399628,
+				0.10000000149011612
+			]
+		}
+	]
+}
