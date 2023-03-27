@@ -110,7 +110,7 @@ scroll_text = scroll_text + "                                                   
 
 # scroll text drawing routine
 # on-screen usage text
-def update_demo_scroll_text(dt, view_id, res_x, res_y, scroll_x, char_offset, ns, scroll_text, font, font_program, font_size, text_render_state, fade=1.0):
+def update_demo_scroll_text(dt, view_id, res_x, res_y, scroll_x, char_offset, ns, scroll_text, font, font_program, font_size, text_render_state, fade=1.0, y_offset=0.0):
 	scroll_char_len = 120
 	scroll_x = scroll_x + hg.time_to_sec_f(dt) * 60.0 * 1.5 # math.min(1.0/60.0, hg.time_from_sec_f(dt)) * 60.0
 
@@ -123,6 +123,7 @@ def update_demo_scroll_text(dt, view_id, res_x, res_y, scroll_x, char_offset, ns
 	
 	text_pos = hg.Vec3(-(16 * res_x) / 1280, res_y - (font_size * 1.25), 0)
 	text_pos.x = text_pos.x - scroll_x
+	text_pos.y = text_pos.y + (y_offset * (res_x / 1280.0))
 
 	text_sub = scroll_text[char_offset:char_offset + scroll_char_len]
 

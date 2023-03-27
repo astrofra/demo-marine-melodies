@@ -26,7 +26,7 @@ def draw_line(pos_a, pos_b, line_color, vid, vtx_line_layout, line_shader):
 
 def main():
 	# {}
-	config = {"enable_aaa":True, "low_aaa":False, "skip_intro":False}
+	config = {"enable_aaa":True, "low_aaa":False, "skip_intro":True}
 
 	# hg.SetLogLevel(hg.LL_Normal)
 
@@ -47,7 +47,14 @@ def main():
 	# no_aa
 
 	hg.ShowCursor()
-	config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa = config_gui()
+	# config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa = config_gui()
+	config_done = 1
+	default_res_x = 720
+	default_res_y = 576
+	default_fullscreen = hg.WV_Undecorated
+	full_aaa = True
+	low_aaa = no_aaa = False
+	widescreen = False
 
 	# set config
 	res_x, res_y = default_res_x, default_res_y
@@ -73,6 +80,7 @@ def main():
 		win = hg.NewWindow("Marine Melodies^Resistance(2022)", res_x, res_y, 32, default_fullscreen) #, hg.WV_Fullscreen)
 		hg.RenderInit(win)
 		hg.RenderReset(res_x, res_y, hg.RF_MSAA4X | hg.RF_MaxAnisotropy)
+		# hg.SetWindowPos(win, hg.iVec2(-720,0))
 
 		# create pipeline
 		pipeline = hg.CreateForwardPipeline()
@@ -88,7 +96,11 @@ def main():
 		# DEMO
 		# load the scene to draw to a texture
 		scene = hg.Scene()
-		hg.LoadSceneFromAssets("main_scenery.scn", scene, res, hg.GetForwardPipelineInfo())
+		if widescreen:
+			hg.LoadSceneFromAssets("main_scenery.scn", scene, res, hg.GetForwardPipelineInfo())
+		else:
+			hg.LoadSceneFromAssets("main_scenery_4-3.scn", scene, res, hg.GetForwardPipelineInfo())
+
 		intro_anims = ["begin", "fadein", "fadeout", "title_fadein", "title_fadeout", "# end"]
 		intro_current_anim = 0
 		intro_playing_anim = None
@@ -534,13 +546,20 @@ def main():
 			tex_uniforms = [hg.MakeUniformSetTexture('s_tex', color, 0), hg.MakeUniformSetTexture('s_depth', depth, 1), 
 							hg.MakeUniformSetTexture('b_tex', bubble_color, 2), hg.MakeUniformSetTexture('b_depth', bubble_depth, 3)]
 
+			_screen_pos = hg.Vec3(0, 0, 0)
+			if widescreen == False:
+				_screen_pos.z = 0.1725
+
 			hg.DrawModel(view_id, screen_mdl, screen_prg, val_uniforms, tex_uniforms, 
-						hg.TransformationMat4(hg.Vec3(0, 0, 0), hg.Vec3(pi / 2, pi, 0)))
+						hg.TransformationMat4(_screen_pos, hg.Vec3(pi / 2, pi, 0)))
 
 			view_id = view_id + 1
 			hg.SetView2D(view_id, 0, 0, res_x, res_y, -1, 1, hg.CF_None, hg.Color.Black, 1, 0)
 
-			view_id, scroll_x, char_offset, ns = update_demo_scroll_text(dt, view_id, res_x, res_y, scroll_x, char_offset, ns, scroll_text, font, font_program, font_size, text_render_state, EaseInOutQuick(fade))
+			if widescreen == False:
+				view_id, scroll_x, char_offset, ns = update_demo_scroll_text(dt, view_id, res_x, res_y, scroll_x, char_offset, ns, scroll_text, font, font_program, font_size, text_render_state, EaseInOutQuick(fade), -40.0)
+			else:
+				view_id, scroll_x, char_offset, ns = update_demo_scroll_text(dt, view_id, res_x, res_y, scroll_x, char_offset, ns, scroll_text, font, font_program, font_size, text_render_state, EaseInOutQuick(fade))
 
 			# Debug physics display
 			if False:

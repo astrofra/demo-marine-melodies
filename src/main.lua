@@ -79,7 +79,7 @@ function main(cmd_arg)
 		win = hg.NewWindow("Marine Melodies^Resistance(2023 XUL Edition)", res_x, res_y, 32, default_fullscreen) --, hg.WV_Fullscreen)
 		hg.RenderInit(win) --, hg.RT_OpenGL)
 		hg.RenderReset(res_x, res_y, hg.RF_MSAA4X | hg.RF_MaxAnisotropy)
-		hg.SetWindowPos(win, hg.iVec2(-720,0))
+		-- hg.SetWindowPos(win, hg.iVec2(-720,0))
 
 		-- create pipeline
 		local pipeline = hg.CreateForwardPipeline()
