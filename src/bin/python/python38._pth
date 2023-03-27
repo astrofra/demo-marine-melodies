@@ -1,6 +1,12 @@
 python38.zip
 .
 ..\harfang
+..\asyncio
+..\aioserial
+..\serial
+..\serial\threaded
+..\serial\tools
+..\serial\urlhandler
 ..\..\
 
 # Uncomment to run site.main() automatically

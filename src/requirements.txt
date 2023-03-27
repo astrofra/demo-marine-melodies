@@ -1,3 +1,2 @@
 harfang==3.2.5
-asyncio
-pyserial-asyncio
+pyserial==3.4

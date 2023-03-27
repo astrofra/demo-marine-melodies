@@ -1,56 +1,25 @@
-import asyncio
-import aioserial
+import serial
 
-async def read_serial(ser):
+s = serial.Serial('COM3', baudrate=9600)
+
+serialString = ""  # Used to hold data coming over UART
+while True:
     while True:
-        # Check if incoming bytes are waiting to be read from the serial input
-        # buffer.
-        if ser.in_waiting > 0:
-            # Read the bytes and convert from binary array to ASCII
-            data = await ser.read_async(ser.in_waiting)
-            data_str = data.decode('ascii')
-            # Print the incoming string without putting a new-line
-            # ('\n') automatically after every print()
-            print(data_str, end='')
+        # Wait until there is data waiting in the serial buffer
+        print(s.in_waiting)
+        if s.in_waiting > 0:
 
-        # Put the rest of your code you want here
+            # Read data out of the buffer until a carraige return / new line is found
+            serialString = s.readline()
 
-        # Sleep 10 ms (0.01 sec) once per loop to let
-        # other tasks run during this time.
-        await asyncio.sleep(0.01)
+            # Print the contents of the serial data
+            # try:
+            #     print(int(serialString.decode("Ascii")))
+            # except:
+            #     pass
 
-async def main():
-    ser = aioserial.AioSerial(port='COM3', baudrate=9600)
-    await read_serial(ser)
+            break
 
-if __name__ == '__main__':
-    asyncio.run(main())
-
-
-# import asyncio
-# import serial_asyncio
-
-# async def read_serial_data(serial_port):
-#     while True:
-#         line = await serial_port.readline()
-#         print(f'Received: {line.decode().strip()}')
-
-# async def main():
-#     # Replace 'COM3' with the serial port name on your system
-#     port = 'COM3'
-#     baudrate = 9600 # 115200
-
-#     # Create a connection to the serial port
-#     serial_port = await serial_asyncio.open_serial_connection(url=port, baudrate=baudrate)
-
-#     # Start the async task to read data from the serial port
-#     read_task = asyncio.create_task(read_serial_data(serial_port))
-
-#     # You can add other async tasks here
-#     # e.g., asyncio.create_task(some_other_async_function())
-
-#     # Wait for the read task to complete (in this case, it will never complete)
-#     await read_task
-
-# if __name__ == '__main__':
-#     asyncio.run(main())
+# while True:
+#     res = s.read()
+#     print(res)

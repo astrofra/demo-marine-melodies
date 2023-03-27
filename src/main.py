@@ -9,13 +9,13 @@ from walkman import *
 from config_gui import *
 from songs_data import songs_data
 from math import pi, sin
+import serial
 
 # credits
 # concept & graphics : fra
 # music : Erk, Nainain, GliGli, Aceman, mAZE, Riddlemak, WillBe
 # code : fra, erk
 # 3D engine : xbarr, mooz, scorpheus, kipixelle
-
 
 def draw_line(pos_a, pos_b, line_color, vid, vtx_line_layout, line_shader):
 	vtx = hg.Vertices(vtx_line_layout, 2)
@@ -29,6 +29,8 @@ def main():
 	config = {"enable_aaa":True, "low_aaa":False, "skip_intro":True}
 
 	# hg.SetLogLevel(hg.LL_Normal)
+
+	com_serial = serial.Serial('COM3', baudrate=9600, timeout=0.5)
 
 	hg.InputInit()
 	hg.AudioInit()
@@ -445,10 +447,21 @@ def main():
 			# events
 			if hg.ReadKeyboard().Key(hg.K_G):
 				event_table = start_event(scene, "guru_meditation_event", event_table)
-			# end
-
 			event_table = update_events(scene, event_table)
-			
+
+			# COM3
+			serialString = ""  # Used to hold data coming over UART
+			while True:
+				# Wait until there is data waiting in the serial buffer
+				# print(com_serial.in_waiting)
+				if com_serial.in_waiting > 0:
+
+					# Read data out of the buffer until a carraige return / new line is found
+					serialString = com_serial.read(128)
+					print(serialString.decode("Ascii"))
+
+					break
+
 			mouse.Update()
 			
 			lines = []
