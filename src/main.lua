@@ -51,7 +51,15 @@ function main(cmd_arg)
 	local widescreen
 
 	hg.ShowCursor()
-	config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa, widescreen = config_gui()
+	-- config_done, default_res_x, default_res_y, default_fullscreen, full_aaa, low_aaa, no_aaa, widescreen = config_gui()
+	config_done = 1
+	default_res_x = 720
+	default_res_y = 576
+	default_fullscreen = 0
+	full_aaa = true
+	low_aaa = false
+	no_aaa = false
+	widescreen = false
 
 	-- set config
 	res_x, res_y = default_res_x, default_res_y
@@ -79,7 +87,7 @@ function main(cmd_arg)
 		win = hg.NewWindow("Marine Melodies^Resistance(2023 XUL Edition)", res_x, res_y, 32, default_fullscreen) --, hg.WV_Fullscreen)
 		hg.RenderInit(win) --, hg.RT_OpenGL)
 		hg.RenderReset(res_x, res_y, hg.RF_MSAA4X | hg.RF_MaxAnisotropy)
-		hg.SetWindowPos(win, hg.iVec2(-720,0))
+		-- hg.SetWindowPos(win, hg.iVec2(-720,0))
 
 		-- create pipeline
 		local pipeline = hg.CreateForwardPipeline()
