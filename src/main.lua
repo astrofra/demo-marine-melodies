@@ -58,7 +58,7 @@ function main(cmd_arg)
 	config_done = 1
 	default_res_x = 720
 	default_res_y = 576
-	default_fullscreen = 0
+	default_fullscreen = hg.WV_Undecorated
 	full_aaa = true
 	low_aaa = false
 	no_aaa = false
