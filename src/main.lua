@@ -27,6 +27,9 @@ function main(cmd_arg)
 	local config = {enable_aaa=true, low_aaa=false, skip_intro=true}
 	local i
 
+	local joystick
+	local joy_button_is_pressed = false
+
 	-- hg.SetLogLevel(hg.LL_Normal)
 
 	hg.InputInit()
@@ -88,6 +91,16 @@ function main(cmd_arg)
 		hg.RenderInit(win) --, hg.RT_OpenGL)
 		hg.RenderReset(res_x, res_y, hg.RF_MSAA4X | hg.RF_MaxAnisotropy)
 		-- hg.SetWindowPos(win, hg.iVec2(-720,0))
+
+		local joy_list = hg.GetJoystickNames()
+		for i = 0, joy_list:size() - 1 do
+			local _joystick = hg.Joystick(joy_list:at(i))
+			if _joystick:GetDeviceName() == "Arduino Leonardo" then
+				print("Joystick found : " .. joy_list:at(i) .. ", " .. _joystick:GetDeviceName())
+				joystick = _joystick
+				break
+			end
+		end
 
 		-- create pipeline
 		local pipeline = hg.CreateForwardPipeline()
@@ -459,6 +472,9 @@ function main(cmd_arg)
 			event_table = update_events(scene, event_table)
 			
 			mouse:Update()
+			if joystick then
+				joystick:Update()
+			end
 			
 			local lines = {}
 			dt = math.min(hg.time_from_sec_f(5.0/60.0), hg.TickClock())
@@ -496,7 +512,7 @@ function main(cmd_arg)
 			end
 
 			-- walkman interactivity
-			walkman_button_on, walkman_button_hover, walkman_button_change_state, walkman_button_pressed_timeout = walkman_interaction_update(scene, mouse, res_vec2, dts, buttons, walkman_buttons_nodes, buttons_trs, walkman_button_on, walkman_button_hover, walkman_button_change_state, walkman_button_pressed_timeout)
+			walkman_button_on, walkman_button_hover, walkman_button_change_state, walkman_button_pressed_timeout, joy_button_is_pressed = walkman_interaction_update(scene, mouse, res_vec2, dts, buttons, walkman_buttons_nodes, buttons_trs, walkman_button_on, walkman_button_hover, walkman_button_change_state, walkman_button_pressed_timeout, joystick, joy_button_is_pressed)
 
 			-- song player
 			song_player, walkman_osd, walkman_button_change_state, walkman_button_on = song_player_update(song_player, walkman_osd, walkman_button_change_state, walkman_button_on, prev_song_idx, walkman_button_pressed_timeout, config)

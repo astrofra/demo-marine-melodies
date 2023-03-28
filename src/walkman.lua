@@ -77,9 +77,26 @@ function get_hovered_button(scene, buttons, mouse_pos, resolution, lines)
 end
 
 function walkman_interaction_update(scene, mouse, res_vec2, dts, buttons, walkman_buttons_nodes, buttons_trs, walkman_button_on, walkman_button_hover, 
-									walkman_button_change_state, walkman_button_pressed_timeout)
+									walkman_button_change_state, walkman_button_pressed_timeout, joystick, joy_button_is_pressed)
 	-- walkman interactivity
 	local walkman_button_hover_idx,_ = get_hovered_button(scene, walkman_buttons_nodes, hg.Vec2(mouse:X(), mouse:Y()), res_vec2)
+
+	if joystick then
+		if joystick:Down(0) then -- if not pressed
+			walkman_button_on = -1
+			walkman_button_change_state = false
+			joy_button_is_pressed = false
+		else -- if pressed
+			if joy_button_is_pressed == false then
+				joy_button_is_pressed = true
+				walkman_button_on = WALKMAN_NEXT
+				walkman_button_hover = -1
+				walkman_button_change_state = true
+				walkman_button_pressed_timeout = hg.GetClock()		
+				print("walkman_button_on = WALKMAN_NEXT")
+			end
+		end
+	end
 
 	-- 	if mouse:Pressed(hg.MB_0) then -- not mouse:Pressed(hg.MB_0) and mouse:Released(hg.MB_0) then
 
@@ -118,7 +135,7 @@ function walkman_interaction_update(scene, mouse, res_vec2, dts, buttons, walkma
 		buttons_trs[button_idx]:SetPos(_pos)
 	end
 
-	return walkman_button_on, walkman_button_hover, walkman_button_change_state, walkman_button_pressed_timeout
+	return walkman_button_on, walkman_button_hover, walkman_button_change_state, walkman_button_pressed_timeout, joy_button_is_pressed
 end
 
 function play_song(_player)
